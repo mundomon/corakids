@@ -1,0 +1,650 @@
+{
+	"name": "ap_eJuego",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "iap_eIdioma"
+		},
+		{
+			"eventType": "variable",
+			"name": "ap_NUM_BUT",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "Numero de elementos a acertar",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 190608248886334
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentTime",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 686489318753502
+		},
+		{
+			"eventType": "variable",
+			"name": "ACIERTOS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 595447515708389
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 580176779708196
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "ImgBtn",
+					"sid": 116891998565949,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TxtBt",
+					"sid": 236453833929499,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "gen_questionmark",
+					"sid": 212434591293782,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "ImgBtn",
+					"sid": 963733615005751,
+					"parameters": {
+						"instance-variable": "Acertada",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 944290088235452
+		},
+		{
+			"functionName": "scriptRellenarArrayAdivina",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "rellena ArrayAdivina y ArrayFiguras"
+				},
+				{
+					"type": "script",
+					"script": "rellenarGameArray();"
+				}
+			],
+			"sid": 223334965727326
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_Play",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 427724872214532,
+							"parameters": {
+								"object": "UIgen_BotonDePlay"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 169984688174562,
+							"parameters": {
+								"instance-variable": "Playing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "InitGame",
+							"sid": 251894876099140
+						}
+					],
+					"sid": 781633295735746
+				}
+			],
+			"sid": 719852519479256
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_INIT GAME",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Inicia el tablero"
+				},
+				{
+					"functionName": "InitGame",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Estrella",
+							"sid": 669952109722976
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImgBtn",
+							"sid": 319865781085032,
+							"parameters": {
+								"instance-variable": "Acertada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 827696548602276,
+							"parameters": {
+								"variable": "ACIERTOS",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UIgen_RelojText",
+							"sid": 522612094453760,
+							"parameters": {
+								"instance-variable": "Tiempo",
+								"value": "0"
+							}
+						},
+						{
+							"callFunction": "scriptRellenarArrayAdivina",
+							"sid": 161851223765597
+						},
+						{
+							"callFunction": "iniciaBotones",
+							"sid": 129268634799391
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ImgBtn",
+							"sid": 790987758968834,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gen_questionmark",
+							"sid": 246940060285029,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "UIgen_RelojText",
+							"sid": 166989911866624,
+							"parameters": {
+								"instance-variable": "Playing",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 946213665063485
+				},
+				{
+					"eventType": "comment",
+					"text": "Inicia los elementos a acertar"
+				},
+				{
+					"functionName": "iniciaBotones",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 449189425132901,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "frame",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 680268519662765
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 629632037599092,
+									"parameters": {
+										"object": "ImgBtn"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ImgBtn",
+									"sid": 245933476003444,
+									"parameters": {
+										"instance-variable": "ModoBoton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ImgBtn",
+									"sid": 227688192704376,
+									"parameters": {
+										"frame-number": "ArrayAdivina.At(frame)"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 524278918731068,
+									"parameters": {
+										"variable": "frame",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 243344914293178
+						}
+					]
+				}
+			],
+			"sid": 251756096721192
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Control de Juego",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 377147640142627,
+							"parameters": {
+								"object": "ImgBtn"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ImgBtn",
+							"sid": 933250464218591,
+							"parameters": {
+								"instance-variable": "Acertada"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ImgBtn",
+							"sid": 579499564734388,
+							"parameters": {
+								"instance-variable": "ModoBoton"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 335479344813579,
+							"parameters": {
+								"first-value": "Functions.ap_ValidarImagen(ImgBtn.AnimationFrame)",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImgBtn",
+							"sid": 755104682461005,
+							"parameters": {
+								"instance-variable": "Acertada",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 423960102286428,
+							"parameters": {
+								"audio-file": "pick-animal",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 304301651015925,
+							"parameters": {
+								"object-to-create": "Estrella",
+								"layer": "2",
+								"x": "Touch.X",
+								"y": "Touch.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 554019641277593,
+							"parameters": {
+								"object-to-create": "Particles",
+								"layer": "2",
+								"x": "Touch.X",
+								"y": "Touch.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TxtBt",
+							"sid": 229520241754515,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 433293315943425
+				},
+				{
+					"eventType": "comment",
+					"text": "Comprueba si se ha acertado la imagen pulsada comparando la figura/frame con la de los botones. Retorna 1 en caso de acertar"
+				},
+				{
+					"functionName": "ap_ValidarImagen",
+					"functionDescription": "Retorno 1 si la imagen esta entre los botones",
+					"functionCategory": "",
+					"functionReturnType": "number",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "FrameFigura",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 691226741811779
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 972531082916817,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 944189002068211,
+									"parameters": {
+										"object": "ImgBtn"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "ImgBtn",
+									"sid": 464805486658534,
+									"parameters": {
+										"instance-variable": "ModoBoton"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "ImgBtn",
+									"sid": 599747571951524,
+									"parameters": {
+										"object": "TxtBt"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 932472422196257,
+									"parameters": {
+										"first-value": "ImgBtn.AnimationFrame",
+										"comparison": 0,
+										"second-value": "FrameFigura"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 362495514793614,
+									"parameters": {
+										"variable": "ACIERTOS",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 907040967323415,
+									"parameters": {
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ImgBtn",
+									"sid": 798945800310912,
+									"parameters": {
+										"instance-variable": "Acertada",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TxtBt",
+									"sid": 381092848998969,
+									"parameters": {
+										"text": "ImgBtn.AnimationFrameTag"
+									}
+								}
+							],
+							"sid": 589920397771534
+						}
+					]
+				}
+			],
+			"sid": 183603658446792
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_GameOver",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 216982325423233,
+							"parameters": {
+								"variable": "ACIERTOS",
+								"comparison": 5,
+								"value": "ap_NUM_BUT"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 326745628953574,
+							"parameters": {
+								"instance-variable": "Playing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "UIgen_RelojText",
+							"sid": 412564338067563,
+							"parameters": {
+								"instance-variable": "Playing",
+								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 378614787961493,
+							"parameters": {
+								"audio-file": "start",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Iniciar",
+							"sid": 503705830638357,
+							"parameters": {
+								"text": "\"MUY BIEN!!\" & newline &\"Tiempo: \"&Reloj.contador&\"s\""
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Iniciar",
+							"sid": 106933440813801,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.2",
+								"off-time": "0.2",
+								"duration": "1.0"
+							}
+						}
+					],
+					"sid": 122171663106097
+				}
+			],
+			"sid": 217342101225834
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "iap_Tiempo",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 835077481964555,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 982374904288453,
+							"parameters": {
+								"instance-variable": "Playing"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UIgen_RelojText",
+							"sid": 352675124923114,
+							"breakpoint": true,
+							"parameters": {
+								"instance-variable": "Tiempo",
+								"value": "UIgen_RelojText.Tiempo+1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_RelojText",
+							"sid": 916952579053796,
+							"parameters": {
+								"text": "UIgen_RelojText.Tiempo"
+							}
+						}
+					],
+					"sid": 237218782160144
+				}
+			],
+			"sid": 295201674615503
+		}
+	],
+	"sid": 131740148850145
+}

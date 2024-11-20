@@ -1,0 +1,11 @@
+{
+	"name": "ap_ImagesAndText",
+	"plugin-id": "Text",
+	"sid": 775784474289500,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"TxtBt"
+	]
+}

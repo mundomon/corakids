@@ -1,0 +1,85 @@
+{
+	"name": "UIgen_TituloBGND_ok",
+	"plugin-id": "Sprite",
+	"sid": 838361156365002,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 503,
+						"height": 83,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7671441,
+						"collisionPoly": {
+							"points": [
+								0.06958250497017893,
+								0,
+								0.9324055666003976,
+								0,
+								0.9502982107355865,
+								0.03614457831325301,
+								0.9701789264413518,
+								0.9036144578313253,
+								0.9562624254473161,
+								0.9518072289156626,
+								0.9324055666003976,
+								1,
+								0.06759443339960239,
+								1,
+								0.03578528827037773,
+								0.927710843373494
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 503,
+						"height": 83,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1629432,
+						"collisionPoly": {
+							"points": [
+								0.07608695652173914,
+								0.04294478527607362,
+								0.9434782608695652,
+								0.0736196319018405,
+								0.9206521739130434,
+								0.9447852760736196,
+								0.05217391304347826,
+								0.901840490797546
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 192593025515525,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

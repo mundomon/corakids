@@ -1,0 +1,79 @@
+{
+	"name": "Pez",
+	"plugin-id": "Sprite",
+	"sid": 405711221220551,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "orden",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 690372436069475
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 47,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1261474,
+						"collisionPoly": {
+							"points": [
+								0.3404255319148936,
+								0,
+								0.425531914893617,
+								0,
+								0.8936170212765957,
+								0.075,
+								1,
+								0.65,
+								1,
+								0.7,
+								0.6595744680851063,
+								1,
+								0.5957446808510638,
+								1,
+								0.1276595744680851,
+								0.8,
+								0.0851063829787234,
+								0.775,
+								0,
+								0.675,
+								0,
+								0.5,
+								0.02127659574468085,
+								0.45,
+								0.23404255319148937,
+								0.1,
+								0.2765957446808511,
+								0.05
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 145669758154681,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"name": "Reloj",
+	"plugin-id": "Text",
+	"sid": 708548519955071,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "tiempoPartida",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 906534604341296
+		},
+		{
+			"name": "segundosTexto",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 188178797068271
+		},
+		{
+			"name": "segundos",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 122777124660053
+		},
+		{
+			"name": "minutos",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 152130790113659
+		},
+		{
+			"name": "contador",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 471570125312326
+		},
+		{
+			"name": "minutosTexto",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 630958055258773
+		},
+		{
+			"name": "OnPlay",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 405805294726294
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

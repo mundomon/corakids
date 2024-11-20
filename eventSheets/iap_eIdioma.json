@@ -1,0 +1,142 @@
+{
+	"name": "iap_eIdioma",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "IDIOMA",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "1 para castellano / 2 per català",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 610830829799852
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 276951368571706,
+					"parameters": {
+						"variable": "IDIOMA",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 715284588194541,
+					"parameters": {
+						"tag": "\"idioma\"",
+						"file": "Cat.json"
+					}
+				}
+			],
+			"sid": 534153721572667
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 481628598739490,
+					"parameters": {
+						"tag": "\"idioma\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "iap_Dictionary",
+					"sid": 899906376992182,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 156908480238934
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-nth-instance",
+					"objectClass": "System",
+					"sid": 753823769878711,
+					"parameters": {
+						"object": "UIgen_DropDownText",
+						"instance": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_DropDownText",
+					"sid": 411106259901969,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"gen_nivel1\")"
+					}
+				}
+			],
+			"sid": 106770183519129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-nth-instance",
+					"objectClass": "System",
+					"sid": 365141938852800,
+					"parameters": {
+						"object": "UIgen_DropDownText",
+						"instance": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_DropDownText",
+					"sid": 828627277361531,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"gen_nivel2\")"
+					}
+				}
+			],
+			"sid": 402351730650215
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-nth-instance",
+					"objectClass": "System",
+					"sid": 572184708849453,
+					"parameters": {
+						"object": "UIgen_DropDownText",
+						"instance": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_DropDownText",
+					"sid": 664335324455410,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"gen_nivel3\")"
+					}
+				}
+			],
+			"sid": 310893732200899
+		}
+	],
+	"sid": 712254930729096
+}

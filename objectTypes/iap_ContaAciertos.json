@@ -1,0 +1,17 @@
+{
+	"name": "iap_ContaAciertos",
+	"plugin-id": "Text",
+	"sid": 678610174778577,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Contador",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 439554023399012
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

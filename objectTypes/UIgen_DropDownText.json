@@ -1,0 +1,15 @@
+{
+	"name": "UIgen_DropDownText",
+	"plugin-id": "Text",
+	"sid": 232805240539087,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 918404514792482
+		}
+	],
+	"effectTypes": []
+}

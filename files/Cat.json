@@ -1,0 +1,14 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "iap_titulo": "Imatges al pallar",
+        "iap_instrucciones1": "Troba els objectes que no es corresponen amb el tema principal",
+        "iap_instrucciones2": "Tria el teu nivell i incrementa la dificultat del joc afegint més imatges",
+        "gen_nivel1": "Nivell 1",
+        "gen_nivel2": "Nivell 2",
+        "gen_nivel3": "Nivell 3",
+        "gen_nivel": "Nivell",
+        "gen_subirNivel": "Pujar Nivell",
+        "Ardilla": "Esquirol"
+    }
+}

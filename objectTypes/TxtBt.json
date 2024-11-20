@@ -1,0 +1,15 @@
+{
+	"name": "TxtBt",
+	"plugin-id": "Text",
+	"sid": 402165889829734,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 472251444346176
+		}
+	],
+	"effectTypes": []
+}

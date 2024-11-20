@@ -1,0 +1,24 @@
+{
+	"name": "UIgen_RelojText",
+	"plugin-id": "Text",
+	"sid": 600709286624952,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Tiempo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 364846981037576
+		},
+		{
+			"name": "Playing",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 216386843019525
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

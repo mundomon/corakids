@@ -1,0 +1,22 @@
+{
+	"name": "star_Particles",
+	"plugin-id": "Particles",
+	"sid": 609247084765433,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 200,
+		"height": 191,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 677554,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

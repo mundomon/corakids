@@ -1,0 +1,494 @@
+{
+	"name": "ap_eInicio",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ap_Nivel",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 355324280413004
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "iap_eIdioma"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 669360638538503
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_NivelText",
+					"sid": 860041971041080,
+					"disabled": true,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"iap_nivel\")&\" \"&ap_Nivel"
+					}
+				}
+			],
+			"sid": 439206323100270
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 299508561122357,
+					"parameters": {
+						"object": "UIgen_BotonDePlay"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 164690324230661,
+					"parameters": {
+						"layout": "ap_Juego"
+					}
+				}
+			],
+			"sid": 205042646773705
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 709227152454932,
+					"parameters": {
+						"tag": "\"idioma\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "iap_Dictionary",
+					"sid": 405625066210855,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_NivelText",
+					"sid": 244256777355207,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
+					}
+				}
+			],
+			"sid": 444663069909644,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nth-instance",
+							"objectClass": "System",
+							"sid": 855628337334054,
+							"parameters": {
+								"object": "UIgen_InstruccionesText",
+								"instance": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_InstruccionesText",
+							"sid": 324552298336405,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"iap_instrucciones1\")"
+							}
+						}
+					],
+					"sid": 627968242487835
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nth-instance",
+							"objectClass": "System",
+							"sid": 315401485441546,
+							"parameters": {
+								"object": "UIgen_InstruccionesText",
+								"instance": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_InstruccionesText",
+							"sid": 897523792370149,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"iap_instrucciones2\")"
+							}
+						}
+					],
+					"sid": 350417185886667
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_SeleccionNivel",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 815867377502762,
+							"parameters": {
+								"object": "UIgen_DropDownText"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 557957282211253,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Playing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "UIgen_DropDownText",
+							"sid": 670340247953330,
+							"parameters": {
+								"object": "UIgen_DropdownBGND",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 169657655423547
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 588963961595145,
+							"parameters": {
+								"object": "UIgen_Nivel"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 464256741020570,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Playing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 561632311444978,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "UIgen_Nivel",
+									"sid": 920562923516614,
+									"parameters": {
+										"instance-variable": "Desplegado"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "UIgen_DropdownBGND",
+									"sid": 337246028246773,
+									"parameters": {
+										"object": "UIgen_Nivel",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "UIgen_DropdownBGND",
+									"sid": 613458812765308,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"ShowDropDown\"",
+										"property": "offsetY",
+										"end-value": "UIgen_Nivel.Y+UIgen_Nivel.Height+(UIgen_DropdownBGND.Height-5)*UIgen_DropdownBGND.IID-5",
+										"time": "0.25",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "UIgen_Nivel",
+									"sid": 750846213972562,
+									"parameters": {
+										"instance-variable": "Desplegado",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 996667952629933
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 291964161892489
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "UIgen_Nivel",
+									"sid": 984465917047369,
+									"parameters": {
+										"instance-variable": "Desplegado"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "UIgen_DropdownBGND",
+									"sid": 764981907108386,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"HideDropDown\"",
+										"property": "offsetY",
+										"end-value": "UIgen_Nivel.Y",
+										"time": "0.25",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 333302081330301
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap",
+							"objectClass": "Touch",
+							"sid": 564718969816987
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 889267641286002,
+							"parameters": {
+								"object": "UIgen_DropdownBGND"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "UIgen_DropdownBGND",
+							"sid": 203211713718813,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"HideDropDown\"",
+								"property": "offsetY",
+								"end-value": "UIgen_Nivel.Y",
+								"time": "0.25",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 398945388936659
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 843312318410223,
+							"parameters": {
+								"object": "UIgen_DropdownBGND"
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 772498658205659,
+							"parameters": {
+								"object": "UIgen_Nivel"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 342671729669054,
+							"parameters": {
+								"variable": "ap_Nivel",
+								"value": "UIgen_DropdownBGND.Nivel"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_NivelText",
+							"sid": 411462255573470,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
+							}
+						}
+					],
+					"sid": 875150005159928,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 947319821937800,
+									"parameters": {
+										"object": "UIgen_DropdownBGND"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "UIgen_DropdownBGND",
+									"sid": 728228860832808,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"HideDropDown\"",
+										"property": "offsetY",
+										"end-value": "UIgen_Nivel.Y",
+										"time": "0.25",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 193540681666159
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "UIgen_DropdownBGND",
+							"sid": 824884981012017,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"HideDropDown\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "UIgen_Nivel",
+							"sid": 826842876949890,
+							"parameters": {
+								"instance-variable": "Desplegado",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 163094124847360
+				},
+				{
+					"functionName": "ap_UI_DropDownChangeLevel",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "NivelClicado",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 461350678108252
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 746802427802486,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 942343060578574,
+									"parameters": {
+										"variable": "NivelClicado",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 108368629499145
+						}
+					]
+				}
+			],
+			"sid": 155494423204535
+		}
+	],
+	"sid": 779506807692722
+}

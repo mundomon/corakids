@@ -1,0 +1,59 @@
+{
+	"name": "Estrella",
+	"plugin-id": "Sprite",
+	"sid": 550352261743375,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 191,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2062757,
+						"collisionPoly": {
+							"points": [
+								0.48,
+								0,
+								0.54,
+								0.010471204188481676,
+								1,
+								0.3769633507853403,
+								1,
+								0.418848167539267,
+								0.79,
+								1,
+								0.17,
+								0.9633507853403142,
+								0,
+								0.418848167539267,
+								0.025,
+								0.3403141361256545
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 904787895031803,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

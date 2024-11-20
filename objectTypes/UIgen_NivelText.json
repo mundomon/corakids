@@ -1,0 +1,31 @@
+{
+	"name": "UIgen_NivelText",
+	"plugin-id": "Text",
+	"sid": 976939775115964,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Dimension",
+			"type": "number",
+			"desc": "Dimension de la sopa de letras",
+			"show": true,
+			"sid": 502592931872640
+		},
+		{
+			"name": "NumPalabras",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 664332418005050
+		},
+		{
+			"name": "Nivel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 298852880098807
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
