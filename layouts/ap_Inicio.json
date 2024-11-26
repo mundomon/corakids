@@ -144,7 +144,9 @@
 						"Nivel1": 50,
 						"Nivel2": 100,
 						"Nivel3": 200,
-						"numeroDeRonda": 0
+						"numeroDeRonda": 0,
+						"mapaEnJuego": 0,
+						"animationEnJuego": "\"Animation 0\""
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

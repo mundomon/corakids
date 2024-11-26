@@ -106,7 +106,6 @@
 			"Interrogante",
 			"Estrella",
 			"Reloj",
-			"old_ImgBt",
 			"ArrayAdivina",
 			"Boton",
 			"Level1",
@@ -150,7 +149,8 @@
 			"ap_ayuda_img",
 			"UIgen_NextLevel_ResultText",
 			"UIgen_CountDown",
-			"ArrayMapas"
+			"ArrayMapas",
+			"TestText"
 		],
 		"subfolders": []
 	},
@@ -158,7 +158,6 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"ImageButtons",
 			"ap_ImagesAndText"
 		],
 		"subfolders": []

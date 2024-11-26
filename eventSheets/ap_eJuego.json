@@ -37,6 +37,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "ap_RondaActual",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 418678516986915
+		},
+		{
+			"eventType": "variable",
 			"name": "ap_NUM_RONDAS",
 			"type": "number",
 			"initialValue": "2",
@@ -154,6 +164,15 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 891563759302603,
+							"parameters": {
+								"variable": "ap_RondaActual",
+								"value": "1"
+							}
+						},
+						{
 							"id": "restart-layout",
 							"objectClass": "System",
 							"sid": 940294011974335
@@ -191,8 +210,8 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "ap_INIT GAME",
-			"description": "",
+			"title": "ap_INIT GAME ",
+			"description": "tablero, level, botones y solucion",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -304,9 +323,9 @@
 						},
 						{
 							"callFunction": "ap_scriptRellenarArrayAdivina",
-							"sid": 528022525198751,
+							"sid": 507021208234044,
 							"parameters": [
-								"ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)"
+								"ArrayMapas.At(ap_RondaActual-1)"
 							]
 						},
 						{
@@ -314,29 +333,28 @@
 							"sid": 129268634799391
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 956642308609147,
-							"disabled": true,
+							"id": "set-instvar-value",
+							"objectClass": "ap_ControlJuego",
+							"sid": 383568630206137,
 							"parameters": {
-								"seconds": "ap_CountDownSartTime"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ImgBtn",
-							"sid": 181100276752297,
-							"disabled": true,
-							"parameters": {
-								"visibility": "visible"
+								"instance-variable": "animationEnJuego",
+								"value": "\"Animation \"&ArrayMapas.At(ap_RondaActual-1)"
 							}
 						},
 						{
 							"id": "set-animation-frame",
 							"objectClass": "ap_MapaImagen",
-							"sid": 725376945768416,
+							"sid": 237901566889117,
 							"parameters": {
-								"frame-number": "ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)"
+								"frame-number": "ArrayMapas.At(ap_RondaActual-1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TestText",
+							"sid": 255636656194044,
+							"parameters": {
+								"text": "\"Ronda: \"&ap_RondaActual&\"/\"&ap_NUM_RONDAS"
 							}
 						}
 					],
@@ -344,7 +362,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Inicia botones/texto en pantalla en funcion del nivel"
+					"text": "Inicia botones/texto en pantalla en funcion del nivel y activo la solucion"
 				},
 				{
 					"functionName": "ap_initLevel",
@@ -404,6 +422,10 @@
 									"parameters": {
 										"visibility": "visible"
 									}
+								},
+								{
+									"callFunction": "ap_prepararSolucion",
+									"sid": 819223040473401
 								}
 							],
 							"sid": 830536693418427
@@ -453,6 +475,10 @@
 									"parameters": {
 										"visibility": "invisible"
 									}
+								},
+								{
+									"callFunction": "ap_prepararSolucion",
+									"sid": 309998645857581
 								}
 							],
 							"sid": 916855691088433
@@ -522,7 +548,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Iniciar Botonoes",
+					"title": "Iniciar Botones y Solucion",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -536,17 +562,7 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "ImgBtn",
-									"sid": 837658117643132,
-									"parameters": {
-										"animation": "\"Animation \"&ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)",
-										"from": "beginning"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 364753259680009,
 							"children": [
 								{
@@ -580,6 +596,15 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "ImgBtn",
+											"sid": 103465546967404,
+											"parameters": {
+												"animation": "\"Animation \"&ArrayMapas.At(ap_RondaActual-1)",
+												"from": "beginning"
+											}
+										},
 										{
 											"id": "set-animation-frame",
 											"objectClass": "ImgBtn",
@@ -625,6 +650,95 @@
 									"sid": 780342684985365
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Hago invisibles y no interaccionables los elementos que no son solucion del mapa de juego"
+						},
+						{
+							"functionName": "ap_prepararSolucion",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TestText",
+									"sid": 839952874184323,
+									"disabled": true,
+									"parameters": {
+										"text": "ImgBtn.AnimationName&\" - \"& ap_ControlJuego.animationEnJuego"
+									}
+								}
+							],
+							"sid": 456274616544997,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 518120182376370,
+											"parameters": {
+												"object": "ImgBtn"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "ImgBtn",
+											"sid": 659310381493163,
+											"parameters": {
+												"instance-variable": "ModoBoton"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 841313039142038,
+											"parameters": {
+												"first-value": "ImgBtn.AnimationName",
+												"comparison": 1,
+												"second-value": "ap_ControlJuego.animationEnJuego"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "ImgBtn",
+											"sid": 327604557975222,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "ImgBtn",
+											"sid": 133208132154027,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "ImgBtn",
+											"sid": 695441830730716,
+											"parameters": {
+												"instance-variable": "Acertada",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 295814789372552
+								}
+							]
 						}
 					],
 					"sid": 252837710081967
@@ -635,7 +749,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "ap_Control de Juego",
+			"title": "ap_Dinamica de Juego",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -679,7 +793,7 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 335479344813579,
+							"sid": 795176871667706,
 							"parameters": {
 								"first-value": "Functions.ap_ValidarImagen(ImgBtn.AnimationFrame)",
 								"comparison": 0,
@@ -958,7 +1072,6 @@
 									"id": "set-boolean-instvar",
 									"objectClass": "UIgen_RelojText",
 									"sid": 100517276283055,
-									"breakpoint": true,
 									"parameters": {
 										"instance-variable": "Playing",
 										"value": "false"
@@ -983,18 +1096,65 @@
 									"parameters": {
 										"seconds": "1"
 									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 420713905630648,
-									"parameters": {
-										"layer": "\"NextLevel\"",
-										"visibility": "visible"
-									}
 								}
 							],
-							"sid": 740782468681868
+							"sid": 740782468681868,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 803776978784904,
+											"parameters": {
+												"variable": "ap_RondaActual",
+												"comparison": 2,
+												"value": "ap_NUM_RONDAS"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 505995238509091,
+											"parameters": {
+												"variable": "ap_RondaActual",
+												"value": "1"
+											}
+										},
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 573472376440419
+										}
+									],
+									"sid": 569703845674835
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 966563789316359
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 306854320132423,
+											"parameters": {
+												"layer": "\"NextLevel\"",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 315906125164284
+								}
+							]
 						}
 					]
 				}
