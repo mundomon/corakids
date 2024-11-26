@@ -648,7 +648,7 @@
 					"world": {
 						"x": 410.6169277633909,
 						"y": 595.6812400467405,
-						"width": 60.230188106365716,
+						"width": 60.23018810636571,
 						"height": 40.53646651279448,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -746,7 +746,7 @@
 					"world": {
 						"x": 1063.3532150933854,
 						"y": 297.18390773463625,
-						"width": 121.65616868156997,
+						"width": 121.65616868156995,
 						"height": 38.439653137037716,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -844,7 +844,7 @@
 					"world": {
 						"x": 1117.71982960777,
 						"y": 627.5745058256333,
-						"width": 124.23419596160556,
+						"width": 124.23419596160558,
 						"height": 53.47013335781941,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1114,7 +1114,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1163,7 +1163,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1212,7 +1212,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 2,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1261,7 +1261,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 3,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1310,7 +1310,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 4,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1359,7 +1359,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 5,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1390,7 +1390,7 @@
 					"world": {
 						"x": 781.7055074299367,
 						"y": 343.5985781401856,
-						"width": 57.20026413619597,
+						"width": 57.20026413619596,
 						"height": 51.81414650917512,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1408,7 +1408,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 6,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1457,7 +1457,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 7,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1506,7 +1506,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 8,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1555,7 +1555,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 9,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1604,7 +1604,7 @@
 					"type": "ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Animation 3",
 						"initial-frame": 10,
 						"enable-collisions": true,
 						"live-preview": false
