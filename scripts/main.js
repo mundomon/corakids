@@ -61,7 +61,7 @@ function generarArrayBotonesUnico(numMapa) {
   
   let NUM_FIG = imgbtn.animation.frameCount;
   
-  console.log("Animation:"+numMapa+"- numFrames:" + NUM_FIG);
+  //console.log("Animation:"+numMapa+"- numFrames:" + NUM_FIG);
   
   // Generar NUM_BTNS números aleatorios únicos.
   while (array.length < NUM_BTNS) {
@@ -81,7 +81,6 @@ function generarArrayMapasUnico(){
   
   var array = [];
   // Generar NUM_RONDAS numeros aleatorios únicos.
-  console.log("rondas: "+NUM_RONDAS+" - Maps: "+NUM_MAPS_L1);
   while (array.length < NUM_RONDAS) {
     var numeroAleatorio = Math.floor(Math.random() * NUM_MAPS_L1); // Genera un número aleatorio del 0 al Numero de mapas que tenga el nivel
     if (array.indexOf(numeroAleatorio) === -1) { // Verifica si el número no está en el array
