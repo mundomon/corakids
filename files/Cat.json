@@ -9,6 +9,13 @@
         "gen_nivel3": "Nivell 3",
         "gen_nivel": "Nivell",
         "gen_subirNivel": "Pujar Nivell",
-        "Ardilla": "Esquirol"
+        "ap_titulo": "Agulla al paller",
+        "ap_instrucciones_nivel1": "Troba els elements amagats dins de la imatge gran.\n\nDescobreix-los tots i puja de nivell",
+        "ap_instrucciones_nivel2": "Troba els elements amagats dins de la imatge gran. Ara només amb el text.\n\nDescobreix-los tots i puja de nivell",
+        "ap_nexLevel_result": "Molt be!! Ho has aconseguit en ",
+        "segundos": "segons",
+        "nivel": "Nivell",
+        "otravez": "Un altre cop",
+        "subirnivel": "Pujar nivell"
     }
 }

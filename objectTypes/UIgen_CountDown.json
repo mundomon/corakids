@@ -1,0 +1,17 @@
+{
+	"name": "UIgen_CountDown",
+	"plugin-id": "Text",
+	"sid": 478308094103519,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Tiempo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 360724227370345
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

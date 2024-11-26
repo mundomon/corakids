@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 40702,
+	"savedWithRelease": 41600,
 	"name": "AgujaEnPajarNormalizado",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -101,25 +101,14 @@
 	"uniqueId": "7epf4x71rpt",
 	"objectTypes": {
 		"items": [
-			"Fondo",
 			"Touch",
-			"Pajaro",
-			"Pez",
-			"Mapache",
-			"Erizo",
 			"Iniciar",
-			"Play",
 			"Interrogante",
 			"Estrella",
 			"Reloj",
 			"old_ImgBt",
 			"ArrayAdivina",
-			"ArrayFiguras",
 			"Boton",
-			"Lagartija",
-			"Ardilla",
-			"Rana",
-			"Tortuga",
 			"Level1",
 			"Level2",
 			"TxtBt",
@@ -127,17 +116,15 @@
 			"Audio",
 			"UIgen_fondoLila",
 			"UIgen_TituloBGND_ok",
-			"iap_Titulo",
+			"gen_TituloJuego",
 			"UIgen_InstruccionesText",
 			"UIgen_dialog_panel",
-			"iap_Hospital",
-			"iap_Animales",
 			"UIgen_BotonDePlay",
-			"iap_ControlJuego",
+			"ap_ControlJuego",
 			"UIgen_mano",
 			"UIgen_IniciarText",
 			"star_Particles",
-			"ap_imagenBosque",
+			"ap_MapaImagen",
 			"UIgen_DropdownBGND",
 			"UIgen_DropDownText",
 			"UIgen_Home_Mal",
@@ -154,7 +141,16 @@
 			"Life",
 			"iap_ContaAciertos",
 			"ImgBtn",
-			"gen_questionmark"
+			"gen_questionmark",
+			"UIgen_Check",
+			"iap_NivelJuegoText",
+			"UIgen_BotonDePlay2",
+			"gen_NextLevel_Iniciar",
+			"gen_NextLevel_Continuar",
+			"ap_ayuda_img",
+			"UIgen_NextLevel_ResultText",
+			"UIgen_CountDown",
+			"ArrayMapas"
 		],
 		"subfolders": []
 	},
@@ -162,7 +158,6 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"AnimalsBoard",
 			"ImageButtons",
 			"ap_ImagesAndText"
 		],
@@ -380,8 +375,7 @@
 	},
 	"timelines": {
 		"items": [
-			"iap_mano",
-			"Timeline 1"
+			"ap_tlMano"
 		],
 		"subfolders": [
 			{
@@ -443,7 +437,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

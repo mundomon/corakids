@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "ap_Nivel",
+			"name": "iap_Nivel",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -26,12 +26,20 @@
 			],
 			"actions": [
 				{
-					"id": "set-text",
-					"objectClass": "UIgen_NivelText",
-					"sid": 860041971041080,
-					"disabled": true,
+					"id": "play-timeline-by-name",
+					"objectClass": "Timeline",
+					"sid": 155693683189267,
 					"parameters": {
-						"text": "iap_Dictionary.Get(\"iap_nivel\")&\" \"&ap_Nivel"
+						"timeline-name": "\"ap_tlMano\"",
+						"tags": "\"mueveMano\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "ap_ayuda_img",
+					"sid": 174097923870157,
+					"parameters": {
+						"frame-number": "iap_Nivel-1"
 					}
 				}
 			],
@@ -50,6 +58,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 841210453802889,
+					"parameters": {
+						"variable": "ap_CountDownSartTime",
+						"value": "4"
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
@@ -87,63 +104,36 @@
 					"objectClass": "UIgen_NivelText",
 					"sid": 244256777355207,
 					"parameters": {
-						"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
+						"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "gen_TituloJuego",
+					"sid": 134495954821788,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"ap_titulo\")"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_InstruccionesText",
+					"sid": 633838298997047,
+					"disabled": true,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"ap_instrucciones\")"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_InstruccionesText",
+					"sid": 387281084026675,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"ap_instrucciones_nivel\"&iap_Nivel)"
 					}
 				}
 			],
-			"sid": 444663069909644,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nth-instance",
-							"objectClass": "System",
-							"sid": 855628337334054,
-							"parameters": {
-								"object": "UIgen_InstruccionesText",
-								"instance": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "UIgen_InstruccionesText",
-							"sid": 324552298336405,
-							"parameters": {
-								"text": "iap_Dictionary.Get(\"iap_instrucciones1\")"
-							}
-						}
-					],
-					"sid": 627968242487835
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nth-instance",
-							"objectClass": "System",
-							"sid": 315401485441546,
-							"parameters": {
-								"object": "UIgen_InstruccionesText",
-								"instance": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "UIgen_InstruccionesText",
-							"sid": 897523792370149,
-							"parameters": {
-								"text": "iap_Dictionary.Get(\"iap_instrucciones2\")"
-							}
-						}
-					],
-					"sid": 350417185886667
-				}
-			]
+			"sid": 444663069909644
 		},
 		{
 			"eventType": "group",
@@ -369,8 +359,9 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 342671729669054,
+							"disabled": true,
 							"parameters": {
-								"variable": "ap_Nivel",
+								"variable": "iap_Nivel",
 								"value": "UIgen_DropdownBGND.Nivel"
 							}
 						},
@@ -378,9 +369,17 @@
 							"id": "set-text",
 							"objectClass": "UIgen_NivelText",
 							"sid": 411462255573470,
+							"disabled": true,
 							"parameters": {
-								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
+								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
 							}
+						},
+						{
+							"callFunction": "ap_UI_DropDownChangeLevel",
+							"sid": 672184553305883,
+							"parameters": [
+								"UIgen_DropdownBGND.Nivel"
+							]
 						}
 					],
 					"sid": 875150005159928,
@@ -464,7 +463,33 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 237343238889225,
+							"parameters": {
+								"variable": "iap_Nivel",
+								"value": "NivelClicado"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_NivelText",
+							"sid": 614844150889217,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ap_ayuda_img",
+							"sid": 442997099223386,
+							"parameters": {
+								"frame-number": "iap_Nivel-1"
+							}
+						}
+					],
 					"sid": 746802427802486,
 					"children": [
 						{
@@ -488,6 +513,93 @@
 				}
 			],
 			"sid": 155494423204535
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timeline-finished-by-tags",
+					"objectClass": "Timeline",
+					"sid": 691859115504698,
+					"parameters": {
+						"tags": "\"mueveMano\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 143817688195449,
+					"parameters": {
+						"object-to-create": "star_Particles",
+						"layer": "1",
+						"x": "1069",
+						"y": "305",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "UIgen_Check",
+					"sid": 574642794037498,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Estrella",
+					"sid": 587106892691385,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 279565645172066,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "UIgen_Check",
+					"sid": 158055798892044,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Estrella",
+					"sid": 350992050924819,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "UIgen_mano",
+					"sid": 634841796733324,
+					"parameters": {
+						"x": "1216",
+						"y": "654"
+					}
+				},
+				{
+					"id": "play-timeline-by-name",
+					"objectClass": "Timeline",
+					"sid": 856293430462816,
+					"parameters": {
+						"timeline-name": "\"ap_tlMano\"",
+						"tags": "\"mueveMano\""
+					}
+				}
+			],
+			"sid": 795272805660330
 		}
 	],
 	"sid": 779506807692722

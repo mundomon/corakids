@@ -7,6 +7,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "ap_CountDownSartTime",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 297950631754707
+		},
+		{
+			"eventType": "variable",
 			"name": "ap_NUM_BUT",
 			"type": "number",
 			"initialValue": "5",
@@ -17,7 +27,27 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "CurrentTime",
+			"name": "ap_NUM_MAPS_LEVEL1",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 756979165319694
+		},
+		{
+			"eventType": "variable",
+			"name": "ap_NUM_RONDAS",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 311226849213178
+		},
+		{
+			"eventType": "variable",
+			"name": "ap_CurrentTime",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -27,7 +57,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "ACIERTOS",
+			"name": "ap_ACIERTOS",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -56,9 +86,9 @@
 				{
 					"id": "set-visible",
 					"objectClass": "TxtBt",
-					"sid": 236453833929499,
+					"sid": 275586114933073,
 					"parameters": {
-						"visibility": "visible"
+						"visibility": "invisible"
 					}
 				},
 				{
@@ -77,36 +107,18 @@
 						"instance-variable": "Acertada",
 						"value": "false"
 					}
+				},
+				{
+					"callFunction": "ap_InitGame",
+					"sid": 868397761579432
 				}
 			],
 			"sid": 944290088235452
 		},
 		{
-			"functionName": "scriptRellenarArrayAdivina",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"type": "comment",
-					"text": "rellena ArrayAdivina y ArrayFiguras"
-				},
-				{
-					"type": "script",
-					"script": "rellenarGameArray();"
-				}
-			],
-			"sid": 223334965727326
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "ap_Play",
+			"title": "ap_Play/QUIT",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -133,11 +145,45 @@
 					],
 					"actions": [
 						{
-							"callFunction": "InitGame",
-							"sid": 251894876099140
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 498432320110656,
+							"parameters": {
+								"variable": "ap_CountDownSartTime",
+								"value": "3"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 940294011974335
 						}
 					],
 					"sid": 781633295735746
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 971964900117986,
+							"parameters": {
+								"object": "UIgen_Close"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 531580998851512,
+							"parameters": {
+								"layout": "ap_Inicio"
+							}
+						}
+					],
+					"sid": 584088341391943
 				}
 			],
 			"sid": 719852519479256
@@ -151,10 +197,10 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "Inicia el tablero"
+					"text": "Inicia el tablero (se llama desde el start of layout)"
 				},
 				{
-					"functionName": "InitGame",
+					"functionName": "ap_InitGame",
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
@@ -170,6 +216,11 @@
 							"sid": 669952109722976
 						},
 						{
+							"id": "destroy",
+							"objectClass": "UIgen_Check",
+							"sid": 117038114604664
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "ImgBtn",
 							"sid": 319865781085032,
@@ -183,7 +234,7 @@
 							"objectClass": "System",
 							"sid": 827696548602276,
 							"parameters": {
-								"variable": "ACIERTOS",
+								"variable": "ap_ACIERTOS",
 								"value": "0"
 							}
 						},
@@ -197,36 +248,95 @@
 							}
 						},
 						{
-							"callFunction": "scriptRellenarArrayAdivina",
-							"sid": 161851223765597
+							"id": "set-text",
+							"objectClass": "UIgen_RelojText",
+							"sid": 369966707725895,
+							"parameters": {
+								"text": "UIgen_RelojText.Tiempo"
+							}
 						},
 						{
-							"callFunction": "iniciaBotones",
-							"sid": 129268634799391
+							"id": "set-text",
+							"objectClass": "UIgen_CountDown",
+							"sid": 418724774575966,
+							"parameters": {
+								"text": "UIgen_CountDown.Tiempo"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UIgen_CountDown",
+							"sid": 687331959977033,
+							"parameters": {
+								"instance-variable": "Tiempo",
+								"value": "ap_CountDownSartTime"
+							}
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "ImgBtn",
-							"sid": 790987758968834,
+							"objectClass": "UIgen_CountDown",
+							"sid": 204899980236215,
 							"parameters": {
 								"visibility": "visible"
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "gen_questionmark",
-							"sid": 246940060285029,
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 883279594732139,
 							"parameters": {
+								"layer": "\"NextLevel\"",
 								"visibility": "invisible"
 							}
 						},
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "UIgen_RelojText",
-							"sid": 166989911866624,
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 503861435152631,
 							"parameters": {
-								"instance-variable": "Playing",
-								"value": "true"
+								"layer": "\"NextLevel\"",
+								"interactive": false
+							}
+						},
+						{
+							"callFunction": "ap_scriptRellenarArrayMapasNivel",
+							"sid": 618044541500538
+						},
+						{
+							"callFunction": "ap_scriptRellenarArrayAdivina",
+							"sid": 528022525198751,
+							"parameters": [
+								"ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)"
+							]
+						},
+						{
+							"callFunction": "ap_iniciaBotones",
+							"sid": 129268634799391
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 956642308609147,
+							"disabled": true,
+							"parameters": {
+								"seconds": "ap_CountDownSartTime"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ImgBtn",
+							"sid": 181100276752297,
+							"disabled": true,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ap_MapaImagen",
+							"sid": 725376945768416,
+							"parameters": {
+								"frame-number": "ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)"
 							}
 						}
 					],
@@ -234,10 +344,10 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Inicia los elementos a acertar"
+					"text": "Inicia botones/texto en pantalla en funcion del nivel"
 				},
 				{
-					"functionName": "iniciaBotones",
+					"functionName": "ap_initLevel",
 					"functionDescription": "",
 					"functionCategory": "",
 					"functionReturnType": "none",
@@ -247,60 +357,277 @@
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [],
-					"sid": 449189425132901,
+					"sid": 857924996969317,
 					"children": [
 						{
-							"eventType": "variable",
-							"name": "frame",
-							"type": "number",
-							"initialValue": "0",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": false,
-							"sid": 680268519662765
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 866852465218408,
+									"parameters": {
+										"variable": "iap_Nivel",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "UIgen_CountDown",
+									"sid": 564117983210736,
+									"disabled": true,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "gen_questionmark",
+									"sid": 440733719112422,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ImgBtn",
+									"sid": 847188872797738,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TxtBt",
+									"sid": 642725614635301,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 830536693418427
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each",
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 629632037599092,
+									"sid": 826957788108238,
 									"parameters": {
-										"object": "ImgBtn"
+										"variable": "iap_Nivel",
+										"comparison": 0,
+										"value": "1"
 									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ImgBtn",
-									"sid": 245933476003444,
-									"parameters": {
-										"instance-variable": "ModoBoton"
-									}
+									"id": "is-visible",
+									"objectClass": "UIgen_CountDown",
+									"sid": 680587300795431,
+									"disabled": true,
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "set-animation-frame",
-									"objectClass": "ImgBtn",
-									"sid": 227688192704376,
+									"id": "set-visible",
+									"objectClass": "gen_questionmark",
+									"sid": 922502937037681,
 									"parameters": {
-										"frame-number": "ArrayAdivina.At(frame)"
+										"visibility": "invisible"
 									}
 								},
 								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 524278918731068,
+									"id": "set-visible",
+									"objectClass": "ImgBtn",
+									"sid": 907135769538853,
 									"parameters": {
-										"variable": "frame",
-										"value": "1"
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TxtBt",
+									"sid": 483519322138758,
+									"parameters": {
+										"visibility": "invisible"
 									}
 								}
 							],
-							"sid": 243344914293178
+							"sid": 916855691088433
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Inicia los elementos a acertar"
+				},
+				{
+					"functionName": "ap_scriptRellenarArrayAdivina",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "mapaDeJuego",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 335850776580542
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "rellena ArrayAdivina y ArrayFiguras"
+						},
+						{
+							"type": "script",
+							"script": "var imgbtn = runtime.objects.ImgBtn.getFirstInstance();\nap_rellenarGameArrayDeBotones(localVars.mapaDeJuego, imgbtn);"
+						}
+					],
+					"sid": 215579088396904
+				},
+				{
+					"eventType": "comment",
+					"text": "Inicia Array Mapas de la partida"
+				},
+				{
+					"functionName": "ap_scriptRellenarArrayMapasNivel",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "rellena ArrayAdivina y ArrayFiguras"
+						},
+						{
+							"type": "script",
+							"script": "ap_rellenarGameArrayDeMapas();"
+						}
+					],
+					"sid": 263850833955116
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Iniciar Botonoes",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"functionName": "ap_iniciaBotones",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "ImgBtn",
+									"sid": 837658117643132,
+									"parameters": {
+										"animation": "\"Animation \"&ArrayMapas.At(ap_ControlJuego.numeroDeRonda-1)",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 364753259680009,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "frame",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 352174109168367
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 524880527455759,
+											"parameters": {
+												"object": "ImgBtn"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "ImgBtn",
+											"sid": 668766345288730,
+											"parameters": {
+												"instance-variable": "ModoBoton"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "ImgBtn",
+											"sid": 100477995529060,
+											"parameters": {
+												"frame-number": "ArrayAdivina.At(frame)"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 129763260143374,
+											"parameters": {
+												"variable": "frame",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 886712415141531
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "ImgBtn",
+											"sid": 161770825786530,
+											"parameters": {
+												"object": "TxtBt"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "TxtBt",
+											"sid": 460299943348896,
+											"parameters": {
+												"text": "ImgBtn.AnimationFrameTag"
+											}
+										}
+									],
+									"sid": 780342684985365
+								}
+							]
+						}
+					],
+					"sid": 252837710081967
 				}
 			],
 			"sid": 251756096721192
@@ -308,7 +635,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Control de Juego",
+			"title": "ap_Control de Juego",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -340,6 +667,14 @@
 								"instance-variable": "ModoBoton"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 637872912453620,
+							"parameters": {
+								"instance-variable": "Playing"
+							}
 						},
 						{
 							"id": "compare-two-values",
@@ -398,14 +733,6 @@
 								"y": "Touch.Y",
 								"create-hierarchy": false,
 								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "TxtBt",
-							"sid": 229520241754515,
-							"parameters": {
-								"visibility": "visible"
 							}
 						}
 					],
@@ -480,7 +807,7 @@
 									"objectClass": "System",
 									"sid": 362495514793614,
 									"parameters": {
-										"variable": "ACIERTOS",
+										"variable": "ap_ACIERTOS",
 										"value": "1"
 									}
 								},
@@ -502,12 +829,79 @@
 									}
 								},
 								{
-									"id": "set-text",
-									"objectClass": "TxtBt",
-									"sid": 381092848998969,
+									"id": "set-visible",
+									"objectClass": "ImgBtn",
+									"sid": 230823779538958,
 									"parameters": {
-										"text": "ImgBtn.AnimationFrameTag"
+										"visibility": "visible"
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TxtBt",
+									"sid": 136495877229237,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "ImgBtn",
+									"sid": 740284598590283,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"ImagenBotonAcertada\"",
+										"property": "offsetX",
+										"end-value": "152",
+										"time": "0.75",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "TxtBt",
+									"sid": 183663412312534,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"TextoBotonAcertado\"",
+										"property": "offsetX",
+										"end-value": "184",
+										"time": "0.75",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 598595747952090,
+									"parameters": {
+										"seconds": "0.75"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 613102076990022,
+									"parameters": {
+										"object-to-create": "UIgen_Check",
+										"layer": "3",
+										"x": "296",
+										"y": "TxtBt.Y +TxtBt.Height/2",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"callFunction": "ap_checkGameOver",
+									"sid": 870428921000546
 								}
 							],
 							"sid": 589920397771534
@@ -525,78 +919,92 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
+					"functionName": "ap_checkGameOver",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 156836047781957,
+					"children": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 216982325423233,
-							"parameters": {
-								"variable": "ACIERTOS",
-								"comparison": 5,
-								"value": "ap_NUM_BUT"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "UIgen_RelojText",
-							"sid": 326745628953574,
-							"parameters": {
-								"instance-variable": "Playing"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 534022825877758,
+									"parameters": {
+										"variable": "ap_ACIERTOS",
+										"comparison": 0,
+										"value": "ap_NUM_BUT"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "UIgen_RelojText",
+									"sid": 532132313100001,
+									"parameters": {
+										"instance-variable": "Playing"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "UIgen_RelojText",
+									"sid": 100517276283055,
+									"breakpoint": true,
+									"parameters": {
+										"instance-variable": "Playing",
+										"value": "false"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 947190866687687,
+									"parameters": {
+										"audio-file": "start",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 745910082236273,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 420713905630648,
+									"parameters": {
+										"layer": "\"NextLevel\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 740782468681868
 						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "UIgen_RelojText",
-							"sid": 412564338067563,
-							"parameters": {
-								"instance-variable": "Playing",
-								"value": "false"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 378614787961493,
-							"parameters": {
-								"audio-file": "start",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Iniciar",
-							"sid": 503705830638357,
-							"parameters": {
-								"text": "\"MUY BIEN!!\" & newline &\"Tiempo: \"&Reloj.contador&\"s\""
-							}
-						},
-						{
-							"id": "flash",
-							"objectClass": "Iniciar",
-							"sid": 106933440813801,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.2",
-								"off-time": "0.2",
-								"duration": "1.0"
-							}
-						}
-					],
-					"sid": 122171663106097
+					]
 				}
 			],
-			"sid": 217342101225834
+			"sid": 185031695704749
 		},
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "iap_Tiempo",
+			"title": "ap_Tiempo",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -625,7 +1033,6 @@
 							"id": "set-instvar-value",
 							"objectClass": "UIgen_RelojText",
 							"sid": 352675124923114,
-							"breakpoint": true,
 							"parameters": {
 								"instance-variable": "Tiempo",
 								"value": "UIgen_RelojText.Tiempo+1"
@@ -644,6 +1051,204 @@
 				}
 			],
 			"sid": 295201674615503
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_CuentaAtras",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 873190380590313,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "UIgen_CountDown",
+							"sid": 578239283951375
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "UIgen_CountDown",
+							"sid": 158971381627269,
+							"parameters": {
+								"instance-variable": "Tiempo",
+								"value": "UIgen_CountDown.Tiempo-1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_CountDown",
+							"sid": 333587970205831,
+							"parameters": {
+								"text": "UIgen_CountDown.Tiempo"
+							}
+						}
+					],
+					"sid": 829307105952875,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 746272862647510,
+									"parameters": {
+										"first-value": "UIgen_CountDown.Tiempo",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "UIgen_CountDown",
+									"sid": 663891492211602,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "UIgen_RelojText",
+									"sid": 712607432842704,
+									"parameters": {
+										"instance-variable": "Playing",
+										"value": "true"
+									}
+								},
+								{
+									"callFunction": "ap_initLevel",
+									"sid": 335501861568076
+								}
+							],
+							"sid": 285721616960575
+						}
+					]
+				}
+			],
+			"sid": 809102862077162
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ap_Next Level",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 591922918194182,
+							"parameters": {
+								"object": "UIgen_BotonDePlay2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "UIgen_RelojText",
+							"sid": 597829258532504,
+							"parameters": {
+								"instance-variable": "Playing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 639590235697043,
+							"parameters": {
+								"variable": "iap_Nivel",
+								"value": "iap_Nivel+1"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 964185754119383,
+							"parameters": {
+								"layout": "ap_Inicio"
+							}
+						}
+					],
+					"sid": 323606547329779
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 967154423536786,
+							"parameters": {
+								"layer": "\"NextLevel\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_NextLevel_ResultText",
+							"sid": 938230634505217,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"ap_nexLevel_result\")&UIgen_RelojText.Tiempo&\" \"&iap_Dictionary.Get(\"segundos\")"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 271610842770146,
+							"parameters": {
+								"layer": "\"NextLevel\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UIgen_NivelText",
+							"sid": 765421387065899,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"nivel\")&\" \"&iap_Nivel"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "gen_NextLevel_Iniciar",
+							"sid": 836572511383827,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"otravez\")"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "gen_NextLevel_Continuar",
+							"sid": 796200042303064,
+							"parameters": {
+								"text": "iap_Dictionary.Get(\"subirnivel\")"
+							}
+						}
+					],
+					"sid": 561542931159416
+				}
+			],
+			"sid": 631815229334059
 		}
 	],
 	"sid": 131740148850145
