@@ -29,7 +29,7 @@
 			"eventType": "variable",
 			"name": "ap_NUM_MAPS_LEVEL1",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -49,7 +49,7 @@
 			"eventType": "variable",
 			"name": "ap_NUM_RONDAS",
 			"type": "number",
-			"initialValue": "2",
+			"initialValue": "3",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -352,9 +352,18 @@
 						{
 							"id": "set-text",
 							"objectClass": "TestText",
-							"sid": 255636656194044,
+							"sid": 696454035475329,
+							"disabled": true,
 							"parameters": {
-								"text": "\"Ronda: \"&ap_RondaActual&\"/\"&ap_NUM_RONDAS"
+								"text": "\"Ronda: \"&ap_RondaActual-1&\"/\"&ap_NUM_RONDAS"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ap_diamantesText",
+							"sid": 268102088440805,
+							"parameters": {
+								"text": "ap_RondaActual-1&\" / \"&ap_NUM_RONDAS"
 							}
 						}
 					],

@@ -49,7 +49,7 @@
 				{
 					"type": "UIgen_Cuadroazul",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -63,7 +63,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 211.5,
+						"x": 222.5,
 						"y": 394.5,
 						"width": 549,
 						"height": 317,
@@ -76,6 +76,94 @@
 							1
 						],
 						"angle": 1.5707963267948966,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UIgen_dialog_panel",
+					"properties": {
+						"left-margin": 16,
+						"right-margin": 16,
+						"top-margin": 16,
+						"bottom-margin": 16,
+						"edges": "stretch",
+						"fill": "stretch",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "overlap"
+					},
+					"uid": 119,
+					"sid": 665156982761550,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 665156982761550,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 63.46573089444507,
+						"y": 118.03907457684011,
+						"width": 315.76166105130363,
+						"height": 552.5403333786079,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UIgen_dialog_panel",
+					"properties": {
+						"left-margin": 16,
+						"right-margin": 16,
+						"top-margin": 16,
+						"bottom-margin": 16,
+						"edges": "stretch",
+						"fill": "stretch",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "overlap"
+					},
+					"uid": 120,
+					"sid": 437616052861526,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 437616052861526,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 411,
+						"y": 116,
+						"width": 808.7616610513037,
+						"height": 552.5403333786079,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
@@ -138,17 +226,17 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 792,
-						"y": 392,
-						"width": 817,
-						"height": 562,
+						"x": 815,
+						"y": 397,
+						"width": 772,
+						"height": 518,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.65
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -352,8 +440,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1147.0582444951892,
-						"y": 221.5072805618987,
+						"x": -166,
+						"y": 421,
 						"width": 74.44374244082842,
 						"height": 47.08062833508055,
 						"originX": 0.5,
@@ -1684,7 +1772,7 @@
 					"world": {
 						"x": 1075.425133852568,
 						"y": 595.7886124799387,
-						"width": 114.12517021039633,
+						"width": 114.12517021039635,
 						"height": 76.68078923471273,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -2517,8 +2605,8 @@
 					"world": {
 						"x": 732.8810924735253,
 						"y": 571.6899313993299,
-						"width": 149.9298080119841,
-						"height": 106.5265208082888,
+						"width": 149.92980801198408,
+						"height": 106.52652080828881,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2680,6 +2768,40 @@
 				}
 			],
 			"sid": 725735760361616,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "TableroTemporal",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 906484893807959,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -2969,9 +3091,9 @@
 					}
 				},
 				{
-					"type": "iap_ContaAciertos",
+					"type": "ap_diamantesText",
 					"properties": {
-						"text": "0/3",
+						"text": "0 / 3",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 18,
@@ -3065,6 +3187,118 @@
 						"y": 182,
 						"width": 560,
 						"height": 320,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UIgen_DropdownBGND",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 121,
+					"sid": 462134352694421,
+					"tags": "",
+					"instanceVariables": {
+						"EscalaDeVelocidad": 0.5,
+						"TiempoEntreObjetos": 1.5,
+						"TasaDobleLanzamiento": 15,
+						"TasaLanzamientoBomba": 15,
+						"Nivel": 1
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 462134352694421,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1001,
+						"y": 37,
+						"width": 140,
+						"height": 52,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UIgen_NivelText",
+					"properties": {
+						"text": "Nivel 1",
+						"enable-bbcode": true,
+						"font": "Poppins-Bold",
+						"size": 18,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 122,
+					"sid": 131732912755055,
+					"tags": "",
+					"instanceVariables": {
+						"Dimension": 6,
+						"NumPalabras": 5,
+						"Nivel": 1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 131732912755055,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1007,
+						"y": 42,
+						"width": 129,
+						"height": 41,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -3202,7 +3436,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 384,
 						"width": 50,
 						"height": 50,
@@ -3251,7 +3485,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 480,
 						"width": 50,
 						"height": 50,
@@ -3300,7 +3534,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 208,
+						"x": 219,
 						"y": 576,
 						"width": 50,
 						"height": 50,
@@ -3327,9 +3561,9 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -3355,7 +3589,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 136,
+						"x": 147,
 						"y": 192,
 						"width": 135.86481502532553,
 						"height": 36.919348643150215,
@@ -3382,9 +3616,9 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -3410,7 +3644,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 136,
+						"x": 147,
 						"y": 280,
 						"width": 135.86481502532553,
 						"height": 36.919348643150215,
@@ -3437,9 +3671,9 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -3465,7 +3699,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 128,
+						"x": 139,
 						"y": 472,
 						"width": 135.86481502532553,
 						"height": 36.919348643150215,
@@ -3492,9 +3726,9 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -3527,7 +3761,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 136,
+						"x": 147,
 						"y": 568,
 						"width": 135.86481502532553,
 						"height": 36.919348643150215,
@@ -3554,9 +3788,9 @@
 						"bold": true,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
@@ -3582,7 +3816,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 128,
+						"x": 139,
 						"y": 368,
 						"width": 135.86481502532553,
 						"height": 36.919348643150215,
@@ -3631,7 +3865,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 208,
 						"width": 50,
 						"height": 50,
@@ -3680,7 +3914,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 296,
 						"width": 50,
 						"height": 50,
@@ -3720,7 +3954,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 216,
 						"width": 50,
 						"height": 50,
@@ -3760,7 +3994,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 304,
 						"width": 50,
 						"height": 50,
@@ -3800,7 +4034,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 392,
 						"width": 50,
 						"height": 50,
@@ -3840,7 +4074,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 488,
 						"width": 50,
 						"height": 50,
@@ -3880,7 +4114,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 200,
+						"x": 211,
 						"y": 584,
 						"width": 50,
 						"height": 50,
