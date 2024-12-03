@@ -37,6 +37,20 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
+					},
+					{
+						"width": 500,
+						"height": 362,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6613539,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 758949181522419,

@@ -1,6 +1,18 @@
 {
     "c2dictionary": true,
     "data": {
+        "18": "",
+        "19": "",
+        "20": "",
+        "21": "",
+        "22": "",
+        "23": "",
+        "24": "",
+        "25": "",
+        "26": "",
+        "27": "",
+        "28": "",
+        "29": "",
         "iap_titulo": "Imatges al pallar",
         "iap_instrucciones1": "Troba els objectes que no es corresponen amb el tema principal",
         "iap_instrucciones2": "Tria el teu nivell i incrementa la dificultat del joc afegint més imatges",
@@ -10,12 +22,14 @@
         "gen_nivel": "Nivell",
         "gen_subirNivel": "Pujar Nivell",
         "ap_titulo": "Agulla al paller",
-        "ap_instrucciones_nivel1": "Troba els elements amagats dins de la imatge gran.\n\nDescobreix-los tots i puja de nivell",
-        "ap_instrucciones_nivel2": "Troba els elements amagats dins de la imatge gran. Ara només amb el text.\n\nDescobreix-los tots i puja de nivell",
+        "ap_instrucciones_nivel1": "Troba els elements amagats dins de la imatge gran.\n\nDescobreix-los tots, completa 3 rondes i puja de nivell.",
+        "ap_instrucciones_nivel2": "Troba els elements amagats dins de la imatge gran. Ara només amb el text.\n\nDescobreix-los tots, completa 3 rondes i puja de nivell.",
+        "ap_instrucciones_nivel3": "Més dificil encara. Les imatges estan ben amagades i tenen diferents colors.\n\nDescobreix-los tots i completa les 3 rondes.",
         "ap_nexLevel_result": "Molt be!! Ho has aconseguit en ",
         "segundos": "segons",
         "nivel": "Nivell",
         "otravez": "Un altre cop",
-        "subirnivel": "Pujar nivell"
+        "subirnivel": "Pujar nivell",
+        "jugar": "Jugar"
     }
 }

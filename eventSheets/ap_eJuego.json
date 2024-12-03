@@ -29,8 +29,8 @@
 			"eventType": "variable",
 			"name": "ap_NUM_MAPS_LEVEL1",
 			"type": "number",
-			"initialValue": "5",
-			"comment": "",
+			"initialValue": "3",
+			"comment": "Los mapas para nivel 1 y 2 (frames de ap_MapaImagen). El resto son para nivel 3",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 756979165319694
@@ -87,7 +87,7 @@
 			"actions": [
 				{
 					"id": "set-visible",
-					"objectClass": "ImgBtn",
+					"objectClass": "ap_ImgBtn",
 					"sid": 116891998565949,
 					"parameters": {
 						"visibility": "invisible"
@@ -102,6 +102,14 @@
 					}
 				},
 				{
+					"id": "set-text",
+					"objectClass": "UIgen_NivelText",
+					"sid": 989953648077665,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"gen_nivel\"&ap_Nivel)"
+					}
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "gen_questionmark",
 					"sid": 212434591293782,
@@ -111,7 +119,7 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "ImgBtn",
+					"objectClass": "ap_ImgBtn",
 					"sid": 963733615005751,
 					"parameters": {
 						"instance-variable": "Acertada",
@@ -241,11 +249,19 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "ImgBtn",
+							"objectClass": "ap_ImgBtn",
 							"sid": 319865781085032,
 							"parameters": {
 								"instance-variable": "Acertada",
 								"value": "false"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "ap_ImgBtn",
+							"sid": 687951774834354,
+							"parameters": {
+								"collisions": "enabled"
 							}
 						},
 						{
@@ -383,7 +399,25 @@
 					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "gen_questionmark",
+							"sid": 525799805069575,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 991432699005809,
+							"parameters": {
+								"layer": "\"TableroSolucion\"",
+								"visibility": "invisible"
+							}
+						}
+					],
 					"sid": 857924996969317,
 					"children": [
 						{
@@ -392,19 +426,50 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 866852465218408,
+									"sid": 293658959810589,
 									"parameters": {
-										"variable": "iap_Nivel",
+										"variable": "ap_Nivel",
 										"comparison": 0,
-										"value": "2"
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ap_ImgBtn",
+									"sid": 989557654621121,
+									"parameters": {
+										"visibility": "visible"
 									}
 								},
 								{
-									"id": "is-visible",
-									"objectClass": "UIgen_CountDown",
-									"sid": 564117983210736,
-									"disabled": true,
-									"isInverted": true
+									"id": "set-visible",
+									"objectClass": "TxtBt",
+									"sid": 491050605899982,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"callFunction": "ap_prepararSolucion",
+									"sid": 867281984793984
+								}
+							],
+							"sid": 526858385803638
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 866852465218408,
+									"parameters": {
+										"variable": "ap_Nivel",
+										"comparison": 0,
+										"value": "2"
+									}
 								}
 							],
 							"actions": [
@@ -412,13 +477,14 @@
 									"id": "set-visible",
 									"objectClass": "gen_questionmark",
 									"sid": 440733719112422,
+									"disabled": true,
 									"parameters": {
 										"visibility": "invisible"
 									}
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 847188872797738,
 									"parameters": {
 										"visibility": "invisible"
@@ -445,34 +511,28 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 826957788108238,
+									"sid": 871145653351350,
 									"parameters": {
-										"variable": "iap_Nivel",
+										"variable": "ap_Nivel",
 										"comparison": 0,
-										"value": "1"
+										"value": "3"
 									}
-								},
-								{
-									"id": "is-visible",
-									"objectClass": "UIgen_CountDown",
-									"sid": 680587300795431,
-									"disabled": true,
-									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "set-visible",
 									"objectClass": "gen_questionmark",
-									"sid": 922502937037681,
+									"sid": 507312937754378,
+									"disabled": true,
 									"parameters": {
 										"visibility": "invisible"
 									}
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "ImgBtn",
-									"sid": 907135769538853,
+									"objectClass": "ap_ImgBtn",
+									"sid": 998911546390628,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -480,17 +540,17 @@
 								{
 									"id": "set-visible",
 									"objectClass": "TxtBt",
-									"sid": 483519322138758,
+									"sid": 423276546772459,
 									"parameters": {
 										"visibility": "invisible"
 									}
 								},
 								{
 									"callFunction": "ap_prepararSolucion",
-									"sid": 309998645857581
+									"sid": 600298956001795
 								}
 							],
-							"sid": 916855691088433
+							"sid": 144576299567815
 						}
 					]
 				},
@@ -523,7 +583,7 @@
 						},
 						{
 							"type": "script",
-							"script": "var imgbtn = runtime.objects.ImgBtn.getFirstInstance();\nap_rellenarGameArrayDeBotones(localVars.mapaDeJuego, imgbtn);"
+							"script": "var imgbtn = runtime.objects.ap_ImgBtn.getFirstInstance();\nap_rellenarGameArrayDeBotones(localVars.mapaDeJuego, imgbtn, runtime.globalVars.ap_Nivel);"
 						}
 					],
 					"sid": 215579088396904
@@ -549,7 +609,7 @@
 						},
 						{
 							"type": "script",
-							"script": "ap_rellenarGameArrayDeMapas();"
+							"script": "ap_rellenarGameArrayDeMapas(runtime.globalVars.ap_Nivel, runtime.objects.ap_MapaImagen.getFirstInstance());"
 						}
 					],
 					"sid": 263850833955116
@@ -592,12 +652,12 @@
 											"objectClass": "System",
 											"sid": 524880527455759,
 											"parameters": {
-												"object": "ImgBtn"
+												"object": "ap_ImgBtn"
 											}
 										},
 										{
 											"id": "is-boolean-instance-variable-set",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 668766345288730,
 											"parameters": {
 												"instance-variable": "ModoBoton"
@@ -607,7 +667,7 @@
 									"actions": [
 										{
 											"id": "set-animation",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 103465546967404,
 											"parameters": {
 												"animation": "\"Animation \"&ArrayMapas.At(ap_RondaActual-1)",
@@ -616,7 +676,7 @@
 										},
 										{
 											"id": "set-animation-frame",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 100477995529060,
 											"parameters": {
 												"frame-number": "ArrayAdivina.At(frame)"
@@ -639,7 +699,7 @@
 									"conditions": [
 										{
 											"id": "is-overlapping-another-object",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 161770825786530,
 											"parameters": {
 												"object": "TxtBt"
@@ -652,7 +712,7 @@
 											"objectClass": "TxtBt",
 											"sid": 460299943348896,
 											"parameters": {
-												"text": "ImgBtn.AnimationFrameTag"
+												"text": "ap_ImgBtn.AnimationFrameTag"
 											}
 										}
 									],
@@ -681,7 +741,7 @@
 									"sid": 839952874184323,
 									"disabled": true,
 									"parameters": {
-										"text": "ImgBtn.AnimationName&\" - \"& ap_ControlJuego.animationEnJuego"
+										"text": "ap_ImgBtn.AnimationName&\" - \"& ap_ControlJuego.animationEnJuego"
 									}
 								}
 							],
@@ -695,12 +755,12 @@
 											"objectClass": "System",
 											"sid": 518120182376370,
 											"parameters": {
-												"object": "ImgBtn"
+												"object": "ap_ImgBtn"
 											}
 										},
 										{
 											"id": "is-boolean-instance-variable-set",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 659310381493163,
 											"parameters": {
 												"instance-variable": "ModoBoton"
@@ -712,7 +772,7 @@
 											"objectClass": "System",
 											"sid": 841313039142038,
 											"parameters": {
-												"first-value": "ImgBtn.AnimationName",
+												"first-value": "ap_ImgBtn.AnimationName",
 												"comparison": 1,
 												"second-value": "ap_ControlJuego.animationEnJuego"
 											}
@@ -721,7 +781,7 @@
 									"actions": [
 										{
 											"id": "set-collisions-enabled",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 327604557975222,
 											"parameters": {
 												"collisions": "disabled"
@@ -729,7 +789,7 @@
 										},
 										{
 											"id": "set-visible",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 133208132154027,
 											"parameters": {
 												"visibility": "invisible"
@@ -737,7 +797,7 @@
 										},
 										{
 											"id": "set-boolean-instvar",
-											"objectClass": "ImgBtn",
+											"objectClass": "ap_ImgBtn",
 											"sid": 695441830730716,
 											"parameters": {
 												"instance-variable": "Acertada",
@@ -770,12 +830,12 @@
 							"objectClass": "Touch",
 							"sid": 377147640142627,
 							"parameters": {
-								"object": "ImgBtn"
+								"object": "ap_ImgBtn"
 							}
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "ImgBtn",
+							"objectClass": "ap_ImgBtn",
 							"sid": 933250464218591,
 							"parameters": {
 								"instance-variable": "Acertada"
@@ -784,7 +844,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "ImgBtn",
+							"objectClass": "ap_ImgBtn",
 							"sid": 579499564734388,
 							"parameters": {
 								"instance-variable": "ModoBoton"
@@ -804,7 +864,7 @@
 							"objectClass": "System",
 							"sid": 795176871667706,
 							"parameters": {
-								"first-value": "Functions.ap_ValidarImagen(ImgBtn.AnimationFrame)",
+								"first-value": "Functions.ap_ValidarImagen(ap_ImgBtn.AnimationFrame)",
 								"comparison": 0,
 								"second-value": "1"
 							}
@@ -813,7 +873,7 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "ImgBtn",
+							"objectClass": "ap_ImgBtn",
 							"sid": 755104682461005,
 							"parameters": {
 								"instance-variable": "Acertada",
@@ -894,12 +954,12 @@
 									"objectClass": "System",
 									"sid": 944189002068211,
 									"parameters": {
-										"object": "ImgBtn"
+										"object": "ap_ImgBtn"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 464805486658534,
 									"parameters": {
 										"instance-variable": "ModoBoton"
@@ -907,7 +967,7 @@
 								},
 								{
 									"id": "is-overlapping-another-object",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 599747571951524,
 									"parameters": {
 										"object": "TxtBt"
@@ -918,7 +978,7 @@
 									"objectClass": "System",
 									"sid": 932472422196257,
 									"parameters": {
-										"first-value": "ImgBtn.AnimationFrame",
+										"first-value": "ap_ImgBtn.AnimationFrame",
 										"comparison": 0,
 										"second-value": "FrameFigura"
 									}
@@ -944,7 +1004,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 798945800310912,
 									"parameters": {
 										"instance-variable": "Acertada",
@@ -953,7 +1013,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 230823779538958,
 									"parameters": {
 										"visibility": "visible"
@@ -969,7 +1029,7 @@
 								},
 								{
 									"id": "tween-one-property",
-									"objectClass": "ImgBtn",
+									"objectClass": "ap_ImgBtn",
 									"sid": 740284598590283,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -1115,7 +1175,7 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 803776978784904,
+											"sid": 784760883705432,
 											"parameters": {
 												"variable": "ap_RondaActual",
 												"comparison": 2,
@@ -1131,6 +1191,14 @@
 											"parameters": {
 												"variable": "ap_RondaActual",
 												"value": "1"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "ap_diamantesText",
+											"sid": 702686441719025,
+											"parameters": {
+												"text": "ap_RondaActual-1&\" / \"&ap_NUM_RONDAS"
 											}
 										},
 										{
@@ -1158,6 +1226,14 @@
 											"parameters": {
 												"layer": "\"NextLevel\"",
 												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "ap_diamantesText",
+											"sid": 807477082862665,
+											"parameters": {
+												"text": "ap_RondaActual-1&\" / \"&ap_NUM_RONDAS"
 											}
 										}
 									],
@@ -1344,8 +1420,8 @@
 							"objectClass": "System",
 							"sid": 639590235697043,
 							"parameters": {
-								"variable": "iap_Nivel",
-								"value": "iap_Nivel+1"
+								"variable": "ap_Nivel",
+								"value": "ap_Nivel+1"
 							}
 						},
 						{
@@ -1394,7 +1470,7 @@
 							"objectClass": "UIgen_NivelText",
 							"sid": 765421387065899,
 							"parameters": {
-								"text": "iap_Dictionary.Get(\"nivel\")&\" \"&iap_Nivel"
+								"text": "iap_Dictionary.Get(\"nivel\")&\" \"&ap_Nivel"
 							}
 						},
 						{

@@ -1135,7 +1135,7 @@
 				{
 					"type": "UIgen_IniciarText",
 					"properties": {
-						"text": "Iniciar",
+						"text": "Jugar",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 36,

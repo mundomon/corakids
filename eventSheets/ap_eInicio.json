@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "iap_Nivel",
+			"name": "ap_Nivel",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -39,7 +39,7 @@
 					"objectClass": "ap_ayuda_img",
 					"sid": 174097923870157,
 					"parameters": {
-						"frame-number": "iap_Nivel-1"
+						"frame-number": "ap_Nivel-1"
 					}
 				}
 			],
@@ -104,7 +104,7 @@
 					"objectClass": "UIgen_NivelText",
 					"sid": 244256777355207,
 					"parameters": {
-						"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
+						"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
 					}
 				},
 				{
@@ -129,7 +129,15 @@
 					"objectClass": "UIgen_InstruccionesText",
 					"sid": 387281084026675,
 					"parameters": {
-						"text": "iap_Dictionary.Get(\"ap_instrucciones_nivel\"&iap_Nivel)"
+						"text": "iap_Dictionary.Get(\"ap_instrucciones_nivel\"&ap_Nivel)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "UIgen_IniciarText",
+					"sid": 581975608561284,
+					"parameters": {
+						"text": "iap_Dictionary.Get(\"jugar\")"
 					}
 				}
 			],
@@ -361,7 +369,7 @@
 							"sid": 342671729669054,
 							"disabled": true,
 							"parameters": {
-								"variable": "iap_Nivel",
+								"variable": "ap_Nivel",
 								"value": "UIgen_DropdownBGND.Nivel"
 							}
 						},
@@ -371,7 +379,7 @@
 							"sid": 411462255573470,
 							"disabled": true,
 							"parameters": {
-								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
+								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
 							}
 						},
 						{
@@ -469,7 +477,7 @@
 							"objectClass": "System",
 							"sid": 237343238889225,
 							"parameters": {
-								"variable": "iap_Nivel",
+								"variable": "ap_Nivel",
 								"value": "NivelClicado"
 							}
 						},
@@ -478,7 +486,7 @@
 							"objectClass": "UIgen_NivelText",
 							"sid": 614844150889217,
 							"parameters": {
-								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&iap_Nivel"
+								"text": "iap_Dictionary.Get(\"gen_nivel\")&\" \"&ap_Nivel"
 							}
 						},
 						{
@@ -486,7 +494,7 @@
 							"objectClass": "ap_ayuda_img",
 							"sid": 442997099223386,
 							"parameters": {
-								"frame-number": "iap_Nivel-1"
+								"frame-number": "ap_Nivel-1"
 							}
 						}
 					],
