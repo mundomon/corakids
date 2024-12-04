@@ -464,7 +464,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -497,7 +497,7 @@
 								"y": 420.5,
 								"width": 84.23400322968824,
 								"height": 32.08062833508055,
-								"originX": 0.5,
+								"originX": 0.512987012987013,
 								"originY": 0.5,
 								"color": [
 									1,
@@ -513,7 +513,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 1,
 								"enable-collisions": true,
 								"live-preview": false
@@ -562,7 +562,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 2,
 								"enable-collisions": true,
 								"live-preview": false
@@ -611,7 +611,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 3,
 								"enable-collisions": true,
 								"live-preview": false
@@ -643,7 +643,7 @@
 								"x": 969.3573098314429,
 								"y": 318.80802123583027,
 								"width": 45.179635053740384,
-								"height": 30.340398027465767,
+								"height": 30.34039802746577,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -660,7 +660,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 4,
 								"enable-collisions": true,
 								"live-preview": false
@@ -691,7 +691,7 @@
 							"world": {
 								"x": 641.7683604854079,
 								"y": 334.58574909351137,
-								"width": 39.153892137459415,
+								"width": 39.15389213745941,
 								"height": 43.92262001370664,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -709,7 +709,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 5,
 								"enable-collisions": true,
 								"live-preview": false
@@ -758,7 +758,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 6,
 								"enable-collisions": true,
 								"live-preview": false
@@ -807,7 +807,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 7,
 								"enable-collisions": true,
 								"live-preview": false
@@ -856,7 +856,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 8,
 								"enable-collisions": true,
 								"live-preview": false
@@ -905,7 +905,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 9,
 								"enable-collisions": true,
 								"live-preview": false
@@ -954,7 +954,7 @@
 							"type": "ap_ImgBtn",
 							"properties": {
 								"initially-visible": true,
-								"initial-animation": "Animation 3",
+								"initial-animation": "Animation 10",
 								"initial-frame": 10,
 								"enable-collisions": true,
 								"live-preview": false
@@ -2509,7 +2509,7 @@
 					"type": "ap_ImgBtn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Animation 4",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2540,8 +2540,8 @@
 					"world": {
 						"x": 211,
 						"y": 208,
-						"width": 84.6938775510204,
-						"height": 63.49206349206351,
+						"width": 72.44897959183673,
+						"height": 41.26984126984129,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

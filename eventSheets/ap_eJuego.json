@@ -29,7 +29,7 @@
 			"eventType": "variable",
 			"name": "ap_NUM_MAPS_LEVEL1",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "6",
 			"comment": "Los mapas para nivel 1 y 2 (frames de ap_MapaImagen). El resto son para nivel 3",
 			"isStatic": false,
 			"isConstant": false,
