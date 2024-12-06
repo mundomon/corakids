@@ -17,6 +17,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 643882490629903
+		},
+		{
+			"name": "mID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 777133746283340
 		}
 	],
 	"behaviorTypes": [
@@ -71,7 +78,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ardilla"
 					},
 					{
 						"width": 65,
@@ -131,7 +138,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Caracol"
 					},
 					{
 						"width": 117,
@@ -179,7 +186,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Conejo"
 					},
 					{
 						"width": 115,
@@ -223,7 +230,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Erizo"
 					},
 					{
 						"width": 65,
@@ -265,7 +272,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Lagartija"
 					},
 					{
 						"width": 129,
@@ -301,7 +308,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Mapache"
 					},
 					{
 						"width": 65,
@@ -347,7 +354,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Mariposa"
 					},
 					{
 						"width": 73,
@@ -393,7 +400,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pajaro"
 					},
 					{
 						"width": 62,
@@ -439,7 +446,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pez"
 					},
 					{
 						"width": 69,
@@ -483,7 +490,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Rana"
 					},
 					{
 						"width": 69,
@@ -537,7 +544,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Tortuga"
 					}
 				],
 				"sid": 284942568742836,
@@ -862,7 +869,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Atomo"
 					},
 					{
 						"width": 79,
@@ -902,7 +909,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Báscula"
 					},
 					{
 						"width": 47,
@@ -942,7 +949,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cuentagotas"
 					},
 					{
 						"width": 35,
@@ -992,7 +999,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ostetoscopio"
 					},
 					{
 						"width": 54,
@@ -1042,7 +1049,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Guantes"
 					},
 					{
 						"width": 60,
@@ -1082,7 +1089,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Jeringuilla"
 					},
 					{
 						"width": 26,
@@ -1128,7 +1135,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Matraz"
 					},
 					{
 						"width": 47,
@@ -1176,7 +1183,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Molécula"
 					},
 					{
 						"width": 64,
@@ -1218,7 +1225,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Rollo de papel"
 					}
 				],
 				"sid": 157986890917817,
@@ -1240,7 +1247,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9751621,
+						"imageSpriteId": 7285436,
 						"collisionPoly": {
 							"points": [
 								0.09803921568627451,
@@ -1279,7 +1286,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ancla"
 					},
 					{
 						"width": 52,
@@ -1323,7 +1330,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Barco"
 					},
 					{
 						"width": 56,
@@ -1389,7 +1396,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Barril"
 					},
 					{
 						"width": 31,
@@ -1435,7 +1442,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Botella"
 					},
 					{
 						"width": 35,
@@ -1479,7 +1486,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Caballito de mar"
 					},
 					{
 						"width": 73,
@@ -1523,7 +1530,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Calamar"
 					},
 					{
 						"width": 50,
@@ -1567,7 +1574,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cangrejo"
 					},
 					{
 						"width": 60,
@@ -1609,7 +1616,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Delfin"
 					},
 					{
 						"width": 36,
@@ -1643,7 +1650,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Erizo de mar"
 					},
 					{
 						"width": 33,
@@ -1687,7 +1694,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Estrella de mar"
 					},
 					{
 						"width": 47,
@@ -1741,7 +1748,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Gafas de bucear"
 					},
 					{
 						"width": 57,
@@ -1783,7 +1790,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Llave"
 					},
 					{
 						"width": 40,
@@ -1841,7 +1848,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ostra"
 					},
 					{
 						"width": 30,
@@ -1889,7 +1896,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pato"
 					},
 					{
 						"width": 37,
@@ -1957,7 +1964,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pelota"
 					},
 					{
 						"width": 49,
@@ -2009,7 +2016,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pez globo"
 					},
 					{
 						"width": 53,
@@ -2059,7 +2066,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pez triste"
 					},
 					{
 						"width": 60,
@@ -2097,7 +2104,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pulpo"
 					},
 					{
 						"width": 57,
@@ -2145,7 +2152,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Submarino"
 					},
 					{
 						"width": 71,
@@ -2187,7 +2194,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cofre"
 					},
 					{
 						"width": 56,
@@ -2225,7 +2232,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Timon"
 					},
 					{
 						"width": 88,
@@ -2269,7 +2276,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Tortuga"
 					},
 					{
 						"width": 38,
@@ -2313,7 +2320,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Tubo de bucear"
 					}
 				],
 				"sid": 514430886267325,
@@ -2360,7 +2367,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Armadura"
 					},
 					{
 						"width": 64,
@@ -2390,7 +2397,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cuadro caballero"
 					},
 					{
 						"width": 63,
@@ -2428,7 +2435,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cuadro dama"
 					},
 					{
 						"width": 78,
@@ -2466,7 +2473,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Espada"
 					},
 					{
 						"width": 38,
@@ -2512,7 +2519,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Busto"
 					},
 					{
 						"width": 66,
@@ -2554,7 +2561,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Hacha"
 					},
 					{
 						"width": 46,
@@ -2596,7 +2603,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Huesos"
 					},
 					{
 						"width": 25,
@@ -2650,7 +2657,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Huevo precioso"
 					},
 					{
 						"width": 26,
@@ -2688,7 +2695,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Anfora"
 					},
 					{
 						"width": 62,
@@ -2724,7 +2731,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Lámpara"
 					},
 					{
 						"width": 49,
@@ -2786,7 +2793,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Piedra grabada"
 					},
 					{
 						"width": 45,
@@ -2842,7 +2849,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Sarcófago"
 					}
 				],
 				"sid": 371716711087795,
@@ -2907,7 +2914,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Avion pequeño"
 					},
 					{
 						"width": 106,
@@ -2949,7 +2956,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Carruaje"
 					},
 					{
 						"width": 52,
@@ -3007,7 +3014,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Coche de juguete"
 					},
 					{
 						"width": 28,
@@ -3053,7 +3060,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cohete"
 					},
 					{
 						"width": 49,
@@ -3123,7 +3130,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Globo"
 					},
 					{
 						"width": 99,
@@ -3175,7 +3182,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Mapamundi"
 					},
 					{
 						"width": 87,
@@ -3201,7 +3208,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Satélite"
 					},
 					{
 						"width": 89,
@@ -3243,7 +3250,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Sistema solar"
 					},
 					{
 						"width": 66,
@@ -3283,7 +3290,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Sputnik"
 					},
 					{
 						"width": 46,
@@ -3337,7 +3344,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bicileta"
 					}
 				],
 				"sid": 199614988538355,
@@ -3380,7 +3387,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Castillo de arena"
 					},
 					{
 						"width": 43,
@@ -3430,7 +3437,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cesto"
 					},
 					{
 						"width": 82,
@@ -3462,7 +3469,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cometa"
 					},
 					{
 						"width": 84,
@@ -3518,7 +3525,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Flotador caballo"
 					},
 					{
 						"width": 49,
@@ -3572,7 +3579,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Gafas de bucear"
 					},
 					{
 						"width": 82,
@@ -3606,7 +3613,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Hamaca"
 					},
 					{
 						"width": 37,
@@ -3676,7 +3683,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pelota"
 					},
 					{
 						"width": 61,
@@ -3726,7 +3733,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Raqueta"
 					},
 					{
 						"width": 75,
@@ -3780,7 +3787,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Sandía"
 					}
 				],
 				"sid": 457492444769069,

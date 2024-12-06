@@ -9,7 +9,7 @@
 			"eventType": "variable",
 			"name": "ap_CountDownSartTime",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -29,7 +29,7 @@
 			"eventType": "variable",
 			"name": "ap_NUM_MAPS_LEVEL1",
 			"type": "number",
-			"initialValue": "6",
+			"initialValue": "7",
 			"comment": "Los mapas para nivel 1 y 2 (frames de ap_MapaImagen). El resto son para nivel 3",
 			"isStatic": false,
 			"isConstant": false,
@@ -54,6 +54,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 311226849213178
+		},
+		{
+			"eventType": "variable",
+			"name": "ap_anchoMax_Boton",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Para mover los botones igual al acertar",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 263865478799694
 		},
 		{
 			"eventType": "variable",
@@ -95,7 +105,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "TxtBt",
+					"objectClass": "ap_TxtBtn",
 					"sid": 275586114933073,
 					"parameters": {
 						"visibility": "invisible"
@@ -332,58 +342,76 @@
 								"layer": "\"NextLevel\"",
 								"interactive": false
 							}
-						},
-						{
-							"callFunction": "ap_scriptRellenarArrayMapasNivel",
-							"sid": 618044541500538
-						},
-						{
-							"callFunction": "ap_scriptRellenarArrayAdivina",
-							"sid": 507021208234044,
-							"parameters": [
-								"ArrayMapas.At(ap_RondaActual-1)"
-							]
-						},
-						{
-							"callFunction": "ap_iniciaBotones",
-							"sid": 129268634799391
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "ap_ControlJuego",
-							"sid": 383568630206137,
-							"parameters": {
-								"instance-variable": "animationEnJuego",
-								"value": "\"Animation \"&ArrayMapas.At(ap_RondaActual-1)"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "ap_MapaImagen",
-							"sid": 237901566889117,
-							"parameters": {
-								"frame-number": "ArrayMapas.At(ap_RondaActual-1)"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "TestText",
-							"sid": 696454035475329,
-							"disabled": true,
-							"parameters": {
-								"text": "\"Ronda: \"&ap_RondaActual-1&\"/\"&ap_NUM_RONDAS"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "ap_diamantesText",
-							"sid": 268102088440805,
-							"parameters": {
-								"text": "ap_RondaActual-1&\" / \"&ap_NUM_RONDAS"
-							}
 						}
 					],
-					"sid": 946213665063485
+					"sid": 946213665063485,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 997238017454706,
+									"parameters": {
+										"first-value": "ap_RondaActual",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "ap_scriptRellenarArrayMapasNivel",
+									"sid": 570743586013723
+								}
+							],
+							"sid": 679017799838318
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "ap_scriptRellenarArrayAdivina",
+									"sid": 801448960742319,
+									"parameters": [
+										"ArrayMapas.At(ap_RondaActual-1)"
+									]
+								},
+								{
+									"callFunction": "ap_iniciaBotones",
+									"sid": 320870971236462
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ap_ControlJuego",
+									"sid": 147790573441702,
+									"parameters": {
+										"instance-variable": "animationEnJuego",
+										"value": "\"Animation \"&ArrayMapas.At(ap_RondaActual-1)"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ap_MapaImagen",
+									"sid": 999354672740468,
+									"parameters": {
+										"frame-number": "ArrayMapas.At(ap_RondaActual-1)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "ap_diamantesText",
+									"sid": 596982269410062,
+									"parameters": {
+										"text": "ap_RondaActual&\" / \"&ap_NUM_RONDAS"
+									}
+								}
+							],
+							"sid": 793824878317366
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -445,7 +473,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "TxtBt",
+									"objectClass": "ap_TxtBtn",
 									"sid": 491050605899982,
 									"parameters": {
 										"visibility": "invisible"
@@ -492,7 +520,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "TxtBt",
+									"objectClass": "ap_TxtBtn",
 									"sid": 642725614635301,
 									"parameters": {
 										"visibility": "visible"
@@ -539,7 +567,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "TxtBt",
+									"objectClass": "ap_TxtBtn",
 									"sid": 423276546772459,
 									"parameters": {
 										"visibility": "invisible"
@@ -622,7 +650,7 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
-							"functionName": "ap_iniciaBotones",
+							"functionName": "ap_iniciarIDTextosBotones",
 							"functionDescription": "",
 							"functionCategory": "",
 							"functionReturnType": "none",
@@ -632,8 +660,88 @@
 							"eventType": "function-block",
 							"conditions": [],
 							"actions": [],
+							"sid": 417655733157242,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 239610845167460,
+											"parameters": {
+												"object": "ap_ImgBtn"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "ap_ImgBtn",
+											"sid": 565743595941995,
+											"parameters": {
+												"instance-variable": "ModoBoton"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "ap_ImgBtn",
+											"sid": 386368801145667,
+											"parameters": {
+												"object": "ap_TxtBtn"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "ap_ImgBtn",
+											"sid": 427864551514134,
+											"parameters": {
+												"instance-variable": "mID",
+												"value": "loopindex"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "ap_TxtBtn",
+											"sid": 858111612674364,
+											"parameters": {
+												"instance-variable": "mID",
+												"value": "ap_ImgBtn.mID"
+											}
+										}
+									],
+									"sid": 183970676437143
+								}
+							]
+						},
+						{
+							"functionName": "ap_iniciaBotones",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "ap_iniciarIDTextosBotones",
+									"sid": 151089705654884
+								}
+							],
 							"sid": 364753259680009,
 							"children": [
+								{
+									"eventType": "variable",
+									"name": "anchoMaximo",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 924241126814124
+								},
 								{
 									"eventType": "variable",
 									"name": "frame",
@@ -677,7 +785,7 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "ap_ImgBtn",
-											"sid": 100477995529060,
+											"sid": 689480418481394,
 											"parameters": {
 												"frame-number": "ArrayAdivina.At(frame)"
 											}
@@ -692,31 +800,76 @@
 											}
 										}
 									],
-									"sid": 886712415141531
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+									"sid": 886712415141531,
+									"children": [
 										{
-											"id": "is-overlapping-another-object",
-											"objectClass": "ap_ImgBtn",
-											"sid": 161770825786530,
-											"parameters": {
-												"object": "TxtBt"
-											}
-										}
-									],
-									"actions": [
+											"eventType": "comment",
+											"text": "busco el mas ancho para ponerlos todos centrados en funcion de ese al acertarse"
+										},
 										{
-											"id": "set-text",
-											"objectClass": "TxtBt",
-											"sid": 460299943348896,
-											"parameters": {
-												"text": "ap_ImgBtn.AnimationFrameTag"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 257852843535541,
+													"parameters": {
+														"first-value": "ap_ImgBtn.Width",
+														"comparison": 4,
+														"second-value": "anchoMaximo"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 923252975784220,
+													"parameters": {
+														"variable": "anchoMaximo",
+														"value": "ap_ImgBtn.Width"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 364191729461652,
+													"parameters": {
+														"variable": "ap_anchoMax_Boton",
+														"value": "anchoMaximo"
+													}
+												}
+											],
+											"sid": 477541075095802
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-comparison",
+													"objectClass": "System",
+													"sid": 710034270353661,
+													"parameters": {
+														"object": "ap_TxtBtn",
+														"expression": "ap_TxtBtn.mID",
+														"comparison": 0,
+														"value": "ap_ImgBtn.mID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "ap_TxtBtn",
+													"sid": 331593370089844,
+													"parameters": {
+														"text": "ap_ImgBtn.AnimationFrameTag"
+													}
+												}
+											],
+											"sid": 841217537132394
 										}
-									],
-									"sid": 780342684985365
+									]
 								}
 							]
 						},
@@ -734,17 +887,7 @@
 							"functionParameters": [],
 							"eventType": "function-block",
 							"conditions": [],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "TestText",
-									"sid": 839952874184323,
-									"disabled": true,
-									"parameters": {
-										"text": "ap_ImgBtn.AnimationName&\" - \"& ap_ControlJuego.animationEnJuego"
-									}
-								}
-							],
+							"actions": [],
 							"sid": 456274616544997,
 							"children": [
 								{
@@ -966,14 +1109,6 @@
 									}
 								},
 								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "ap_ImgBtn",
-									"sid": 599747571951524,
-									"parameters": {
-										"object": "TxtBt"
-									}
-								},
-								{
 									"id": "compare-two-values",
 									"objectClass": "System",
 									"sid": 932472422196257,
@@ -981,6 +1116,17 @@
 										"first-value": "ap_ImgBtn.AnimationFrame",
 										"comparison": 0,
 										"second-value": "FrameFigura"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 526774082991772,
+									"parameters": {
+										"object": "ap_TxtBtn",
+										"expression": "ap_TxtBtn.mID",
+										"comparison": 0,
+										"value": "ap_ImgBtn.mID"
 									}
 								}
 							],
@@ -1021,7 +1167,7 @@
 								},
 								{
 									"id": "set-visible",
-									"objectClass": "TxtBt",
+									"objectClass": "ap_TxtBtn",
 									"sid": 136495877229237,
 									"parameters": {
 										"visibility": "visible"
@@ -1030,12 +1176,12 @@
 								{
 									"id": "tween-one-property",
 									"objectClass": "ap_ImgBtn",
-									"sid": 740284598590283,
+									"sid": 993566644526925,
 									"behaviorType": "Tween",
 									"parameters": {
 										"tags": "\"ImagenBotonAcertada\"",
 										"property": "offsetX",
-										"end-value": "152",
+										"end-value": "UIgen_Cuadroazul.X-UIgen_Cuadroazul.Height/2+ap_anchoMax_Boton/2 +50",
 										"time": "0.75",
 										"ease": "default",
 										"destroy-on-complete": "no",
@@ -1046,7 +1192,7 @@
 								},
 								{
 									"id": "tween-one-property",
-									"objectClass": "TxtBt",
+									"objectClass": "ap_TxtBtn",
 									"sid": 183663412312534,
 									"behaviorType": "Tween",
 									"parameters": {
@@ -1077,7 +1223,7 @@
 										"object-to-create": "UIgen_Check",
 										"layer": "3",
 										"x": "296",
-										"y": "TxtBt.Y +TxtBt.Height/2",
+										"y": "ap_TxtBtn.Y +ap_TxtBtn.Height/2",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -1231,9 +1377,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "ap_diamantesText",
-											"sid": 807477082862665,
+											"sid": 823836226177810,
 											"parameters": {
-												"text": "ap_RondaActual-1&\" / \"&ap_NUM_RONDAS"
+												"text": "ap_RondaActual&\" / \"&ap_NUM_RONDAS"
 											}
 										}
 									],

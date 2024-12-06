@@ -1,9 +1,17 @@
 {
-	"name": "TxtBt",
+	"name": "ap_TxtBtn",
 	"plugin-id": "Text",
 	"sid": 402165889829734,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "mID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 610258527773709
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
