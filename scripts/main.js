@@ -45,8 +45,8 @@ export function ap_rellenarGameArrayDeMapas(nivel, newMapa)
 	mapas = newMapa;
 	let marray = generarArrayMapasUnico(nivel);
 	for(var i=0;i<marray.length;i++){
-		//mapasArray.setAt(marray[i],i,0,0);
-		mapasArray.setAt(3,i,0,0);
+		mapasArray.setAt(marray[i],i,0,0);
+		//mapasArray.setAt(11,i,0,0);
 	}
  
 }

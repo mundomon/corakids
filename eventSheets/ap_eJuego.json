@@ -212,6 +212,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 634312243043753,
+							"parameters": {
+								"variable": "ap_RondaActual",
+								"value": "1"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 531580998851512,
@@ -861,9 +870,9 @@
 												{
 													"id": "set-text",
 													"objectClass": "ap_TxtBtn",
-													"sid": 331593370089844,
+													"sid": 234574731308297,
 													"parameters": {
-														"text": "ap_ImgBtn.AnimationFrameTag"
+														"text": "iap_Dictionary.Get(ap_ImgBtn.AnimationFrameTag)"
 													}
 												}
 											],
@@ -1013,56 +1022,123 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 433293315943425,
+					"children": [
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "ap_ImgBtn",
-							"sid": 755104682461005,
-							"parameters": {
-								"instance-variable": "Acertada",
-								"value": "true"
-							}
+							"eventType": "comment",
+							"text": "En el caso que se solapen dos imagenes cojo la de z-index mas alto para que no se marquen las dos."
 						},
 						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 423960102286428,
-							"parameters": {
-								"audio-file": "pick-animal",
-								"loop": "not-looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "ap_ImgBtn",
+									"sid": 742850275610616,
+									"parameters": {
+										"object": "ap_ImgBtn"
+									}
+								},
+								{
+									"id": "pick-by-highest-lowest-value",
+									"objectClass": "System",
+									"sid": 400718578118173,
+									"parameters": {
+										"object": "ap_ImgBtn",
+										"which": "lowest",
+										"expression": "ap_ImgBtn.ZIndex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ap_ImgBtn",
+									"sid": 438432982154508,
+									"parameters": {
+										"instance-variable": "Acertada",
+										"value": "true"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 905006015344426,
+									"parameters": {
+										"object-to-create": "Estrella",
+										"layer": "\"TableroJuego\"",
+										"x": "Touch.X",
+										"y": "Touch.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 156077971702574,
+									"parameters": {
+										"object-to-create": "Particles",
+										"layer": "2",
+										"x": "Touch.X",
+										"y": "Touch.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 552803345269666
 						},
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 304301651015925,
-							"parameters": {
-								"object-to-create": "Estrella",
-								"layer": "2",
-								"x": "Touch.X",
-								"y": "Touch.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 554019641277593,
-							"parameters": {
-								"object-to-create": "Particles",
-								"layer": "2",
-								"x": "Touch.X",
-								"y": "Touch.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 169068565793198
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ap_ImgBtn",
+									"sid": 251527907033731,
+									"parameters": {
+										"instance-variable": "Acertada",
+										"value": "true"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 953947404960139,
+									"parameters": {
+										"object-to-create": "Estrella",
+										"layer": "\"TableroJuego\"",
+										"x": "Touch.X",
+										"y": "Touch.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 730514360408966,
+									"parameters": {
+										"object-to-create": "Particles",
+										"layer": "2",
+										"x": "Touch.X",
+										"y": "Touch.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 130925296071466
 						}
-					],
-					"sid": 433293315943425
+					]
 				},
 				{
 					"eventType": "comment",
@@ -1131,6 +1207,18 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 820332114941381,
+									"parameters": {
+										"audio-file": "pick-animal",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
@@ -1218,10 +1306,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 613102076990022,
+									"sid": 703978435562437,
 									"parameters": {
 										"object-to-create": "UIgen_Check",
-										"layer": "3",
+										"layer": "\"Buttons\"",
 										"x": "296",
 										"y": "ap_TxtBtn.Y +ap_TxtBtn.Height/2",
 										"create-hierarchy": false,
@@ -1571,6 +1659,15 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 993358441777155,
+							"parameters": {
+								"variable": "ap_RondaActual",
+								"value": "1"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 964185754119383,
@@ -1637,6 +1734,64 @@
 						}
 					],
 					"sid": 561542931159416
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 557831174662636,
+							"parameters": {
+								"variable": "ap_Nivel",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "UIgen_BotonDePlay2",
+							"sid": 879974497053416,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "UIgen_BotonDePlay2",
+							"sid": 366495962832285,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "UIgen_BotonDePlay",
+							"sid": 652180141358407,
+							"parameters": {
+								"x": "UIgen_dialog_panel.X+UIgen_dialog_panel.Width/2"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "gen_NextLevel_Iniciar",
+							"sid": 577961377558033,
+							"parameters": {
+								"x": "UIgen_dialog_panel.X+UIgen_dialog_panel.Width/2-gen_NextLevel_Iniciar.Width/2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gen_NextLevel_Continuar",
+							"sid": 489542521803643,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 917573179435039
 				}
 			],
 			"sid": 631815229334059

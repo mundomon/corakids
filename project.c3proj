@@ -148,7 +148,8 @@
 			"UIgen_NextLevel_ResultText",
 			"UIgen_CountDown",
 			"ArrayMapas",
-			"TestText"
+			"TestText",
+			"ap_Fondo_Blanco"
 		],
 		"subfolders": []
 	},
@@ -326,22 +327,6 @@
 		},
 		"general": {
 			"items": [
-				{
-					"name": "encuentra_bosque.png",
-					"type": "image/png",
-					"sid": 121030693003715,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "figura_puercoespin.png",
-					"type": "image/png",
-					"sid": 926392210670602,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
 				{
 					"name": "Cat.json",
 					"type": "application/json",

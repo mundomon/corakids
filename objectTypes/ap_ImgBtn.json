@@ -400,7 +400,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Pajaro"
+						"tag": "Pájaro"
 					},
 					{
 						"width": 62,
@@ -771,7 +771,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Radiografia"
+						"tag": "Radiografía"
 					},
 					{
 						"width": 55,
@@ -821,7 +821,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Termometro"
+						"tag": "Termómetro"
 					},
 					{
 						"width": 47,
@@ -1616,7 +1616,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Delfin"
+						"tag": "Delfín"
 					},
 					{
 						"width": 36,
@@ -2232,7 +2232,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Timon"
+						"tag": "Timón"
 					},
 					{
 						"width": 88,
@@ -2397,7 +2397,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Cuadro caballero"
+						"tag": "Cuadro de caballero"
 					},
 					{
 						"width": 63,
@@ -2435,7 +2435,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Cuadro dama"
+						"tag": "Cuadro de dama"
 					},
 					{
 						"width": 78,
@@ -2731,7 +2731,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Lámpara"
+						"tag": "Lámpara de aceite"
 					},
 					{
 						"width": 49,
@@ -2914,7 +2914,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Avion pequeño"
+						"tag": "Avión pequeño"
 					},
 					{
 						"width": 106,
@@ -3344,7 +3344,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Bicileta"
+						"tag": "Bicicleta"
 					}
 				],
 				"sid": 199614988538355,
@@ -3844,7 +3844,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ardilla"
 					},
 					{
 						"width": 75,
@@ -3882,7 +3882,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cerdo"
 					},
 					{
 						"width": 52,
@@ -3926,7 +3926,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Colmena"
 					},
 					{
 						"width": 51,
@@ -3974,7 +3974,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Erizo"
 					},
 					{
 						"width": 68,
@@ -4012,7 +4012,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Liebre"
 					},
 					{
 						"width": 41,
@@ -4070,7 +4070,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Nido"
 					},
 					{
 						"width": 20,
@@ -4110,7 +4110,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pájaro carpintero"
 					},
 					{
 						"width": 75,
@@ -4154,7 +4154,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pato"
 					},
 					{
 						"width": 99,
@@ -4192,7 +4192,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Zorro"
 					}
 				],
 				"sid": 905299150207965,
@@ -4239,7 +4239,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bayas"
 					},
 					{
 						"width": 38,
@@ -4285,7 +4285,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bellota"
 					},
 					{
 						"width": 38,
@@ -4335,7 +4335,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Flor"
 					},
 					{
 						"width": 38,
@@ -4379,7 +4379,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Hoja"
 					},
 					{
 						"width": 39,
@@ -4425,7 +4425,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Hoja seca"
 					},
 					{
 						"width": 42,
@@ -4477,7 +4477,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Manzana"
 					},
 					{
 						"width": 37,
@@ -4523,7 +4523,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Mariquita"
 					},
 					{
 						"width": 40,
@@ -4577,7 +4577,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pimiento"
 					},
 					{
 						"width": 62,
@@ -4611,7 +4611,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ramita"
 					},
 					{
 						"width": 36,
@@ -4667,7 +4667,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Paraguas"
 					}
 				],
 				"sid": 854681336872538,
@@ -4714,7 +4714,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Molino de viento"
 					},
 					{
 						"width": 66,
@@ -4762,7 +4762,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pájaro"
 					},
 					{
 						"width": 55,
@@ -4844,7 +4844,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pelota"
 					},
 					{
 						"width": 73,
@@ -4888,7 +4888,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pez"
 					},
 					{
 						"width": 66,
@@ -4956,7 +4956,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Plato"
 					},
 					{
 						"width": 94,
@@ -4996,7 +4996,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ratón"
 					},
 					{
 						"width": 63,
@@ -5034,7 +5034,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Tijeras"
 					},
 					{
 						"width": 58,
@@ -5084,7 +5084,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Abeja"
 					},
 					{
 						"width": 123,
@@ -5124,7 +5124,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Caja"
 					},
 					{
 						"width": 69,
@@ -5162,7 +5162,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cordel"
 					}
 				],
 				"sid": 914812776181255,
@@ -5213,7 +5213,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ancla"
 					},
 					{
 						"width": 94,
@@ -5251,7 +5251,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Autobús"
 					},
 					{
 						"width": 91,
@@ -5289,7 +5289,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Avión"
 					},
 					{
 						"width": 64,
@@ -5323,7 +5323,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Barco"
 					},
 					{
 						"width": 77,
@@ -5373,7 +5373,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bicicleta"
 					},
 					{
 						"width": 65,
@@ -5409,7 +5409,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Helicoptero"
 					},
 					{
 						"width": 63,
@@ -5443,7 +5443,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Palmera"
 					},
 					{
 						"width": 67,
@@ -5485,7 +5485,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pez volador"
 					},
 					{
 						"width": 91,
@@ -5519,7 +5519,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Sardina"
 					},
 					{
 						"width": 92,
@@ -5565,7 +5565,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Submarino"
 					}
 				],
 				"sid": 888703739680288,
@@ -5628,7 +5628,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Abanico"
 					},
 					{
 						"width": 35,
@@ -5674,7 +5674,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Anfora"
 					},
 					{
 						"width": 52,
@@ -5716,7 +5716,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Arpa"
 					},
 					{
 						"width": 37,
@@ -5776,7 +5776,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bombilla"
 					},
 					{
 						"width": 36,
@@ -5814,7 +5814,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Buho"
 					},
 					{
 						"width": 39,
@@ -5854,7 +5854,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Casa"
 					},
 					{
 						"width": 19,
@@ -5894,7 +5894,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Lápiz"
 					},
 					{
 						"width": 41,
@@ -5962,7 +5962,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Paleta de pintura"
 					},
 					{
 						"width": 34,
@@ -6016,7 +6016,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pergamino"
 					},
 					{
 						"width": 22,
@@ -6074,7 +6074,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Pluma"
 					},
 					{
 						"width": 37,
@@ -6110,7 +6110,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Matraz"
 					}
 				],
 				"sid": 599092342662513,
@@ -6169,7 +6169,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Ardilla"
 					},
 					{
 						"width": 62,
@@ -6229,7 +6229,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Calabaza"
 					},
 					{
 						"width": 42,
@@ -6291,7 +6291,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Cesta"
 					},
 					{
 						"width": 57,
@@ -6339,7 +6339,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Manzana"
 					},
 					{
 						"width": 63,
@@ -6385,7 +6385,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Nube"
 					},
 					{
 						"width": 52,
@@ -6417,7 +6417,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Paraguas"
 					},
 					{
 						"width": 82,
@@ -6461,7 +6461,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Rana"
 					},
 					{
 						"width": 72,
@@ -6507,7 +6507,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Regadera"
 					},
 					{
 						"width": 46,
@@ -6567,7 +6567,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Seta"
 					},
 					{
 						"width": 53,
@@ -6623,7 +6623,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Taza"
 					},
 					{
 						"width": 43,
@@ -6671,7 +6671,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": ""
+						"tag": "Bayas"
 					}
 				],
 				"sid": 126623744756709,
