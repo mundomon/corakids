@@ -1125,10 +1125,10 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 730514360408966,
+									"sid": 580010589801755,
 									"parameters": {
 										"object-to-create": "Particles",
-										"layer": "2",
+										"layer": "\"TableroJuego\"",
 										"x": "Touch.X",
 										"y": "Touch.Y",
 										"create-hierarchy": false,

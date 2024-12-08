@@ -4379,7 +4379,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Hoja"
+						"tag": "Hoja lobulada"
 					},
 					{
 						"width": 39,
@@ -4425,7 +4425,7 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1,
-						"tag": "Hoja seca"
+						"tag": "Hoja de arce"
 					},
 					{
 						"width": 42,
