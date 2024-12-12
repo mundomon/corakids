@@ -85,13 +85,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Flash",
-			"name": "Flash",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -102,12 +95,8 @@
 	"objectTypes": {
 		"items": [
 			"Touch",
-			"Iniciar",
-			"Interrogante",
 			"Estrella",
-			"Reloj",
 			"ArrayAdivina",
-			"Boton",
 			"ap_TxtBtn",
 			"Particles",
 			"Audio",
@@ -148,7 +137,6 @@
 			"UIgen_NextLevel_ResultText",
 			"UIgen_CountDown",
 			"ArrayMapas",
-			"TestText",
 			"ap_Fondo_Blanco"
 		],
 		"subfolders": []
@@ -180,7 +168,7 @@
 		"script": {
 			"items": [
 				{
-					"name": "main.js",
+					"name": "ap_main.js",
 					"type": "application/javascript",
 					"sid": 999462295922534,
 					"script-info": {

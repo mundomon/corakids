@@ -3983,7 +3983,7 @@
 								"x": 993.7225145238679,
 								"y": 349.04852204175165,
 								"width": 82.8747834985267,
-								"height": 61.55224586849327,
+								"height": 61.55224586849328,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -4118,7 +4118,7 @@
 								"x": 722.5,
 								"y": 264.5,
 								"width": 160.87169319054672,
-								"height": 100.35597712949539,
+								"height": 100.3559771294954,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -5337,7 +5337,7 @@
 							"world": {
 								"x": 989.1996513774484,
 								"y": 271.83771671377997,
-								"width": 58.940256570185156,
+								"width": 58.94025657018515,
 								"height": 25.10665795101567,
 								"originX": 0.5,
 								"originY": 0.5,
@@ -6743,7 +6743,7 @@
 								"x": 843.5,
 								"y": 483.5,
 								"width": 141.1970745080369,
-								"height": 55.13593609437654,
+								"height": 55.13593609437653,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -7178,7 +7178,7 @@
 								"x": 629,
 								"y": 387.5,
 								"width": 55.33625230945337,
-								"height": 27.974828178241502,
+								"height": 27.9748281782415,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -7427,8 +7427,8 @@
 							"world": {
 								"x": 570,
 								"y": 217.5,
-								"width": 124.21401138902395,
-								"height": 84.33719556874442,
+								"width": 124.21401138902397,
+								"height": 84.33719556874443,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -7678,7 +7678,7 @@
 								"x": 874,
 								"y": 440,
 								"width": 59.85571502454344,
-								"height": 24.063716379567367,
+								"height": 24.06371637956737,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [
@@ -8473,63 +8473,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "Reloj",
-					"properties": {
-						"text": "",
-						"enable-bbcode": true,
-						"font": "monospace",
-						"size": 9,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.5647058823529412,
-							0.5725490196078431,
-							0.027450980392156862,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 20,
-					"sid": 562354900474019,
-					"tags": "",
-					"instanceVariables": {
-						"tiempoPartida": 0,
-						"segundosTexto": "",
-						"segundos": 0,
-						"minutos": 0,
-						"contador": 0,
-						"minutosTexto": "",
-						"OnPlay": false
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 81,
-						"y": -182,
-						"width": 225.1588634197116,
-						"height": 122.14730070274166,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0.002285476644386858,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "ap_ImgBtn",
 					"properties": {
